@@ -11,7 +11,7 @@ import UIKit
 class HomeVC: UIViewController {
     
     private var testData:[[String]] = []
-    var userName :String = "이예슬"
+    var userName :String = "안유경"
     var profileData: ProfileData?
     @IBOutlet weak var topSearchButton: UIButton!
     
@@ -37,7 +37,7 @@ class HomeVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     private func setData(){
-        testData = [["버디버디4조","디자인어쩌구"],["아요","화이팅"]]
+        testData = [["버디버디 4조","솝트 최강 디자인 파트","또또"],["버디버디 7조","복소사를 사랑하는 모임"]]
         HomeService.shared.loadHome { networkResult in
             switch networkResult{
             case .success(let data):
@@ -133,9 +133,17 @@ extension HomeVC : UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let sb = UIStoryboard.init(name: "SelectedGroup", bundle: nil)
-        if let dvc = sb.instantiateViewController(identifier: "SelectedGroupVC") as? SelectedGroupViewController { self.navigationController?.pushViewController(dvc, animated: true)
+        if indexPath.row == 0{
+            let sb1 = UIStoryboard.init(name: "SelectedGroup", bundle: nil)
+            if let dvc1 = sb1.instantiateViewController(identifier: "SelectedGroupVC") as? SelectedGroupViewController { self.navigationController?.pushViewController(dvc, animated: true)
+            }
         }
+        else if indexPath.row == 1{
+            let sb2 = UIStoryboard.init(name: "ResultAfterOK", bundle: nil)
+            if let dvc2 = sb2.instantiateViewController(identifier: "ResultAfterOKVC") as? ResultAfterOKVC { self.navigationController?.pushViewController(dvc2, animated: true)
+            }
+        }
+        
     }
 
 }

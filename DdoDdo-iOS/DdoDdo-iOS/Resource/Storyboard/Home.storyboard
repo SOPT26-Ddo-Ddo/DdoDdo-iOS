@@ -60,7 +60,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="favorite-image-example1" translatesAutoresizingMaskIntoConstraints="NO" id="DNQ-aW-O7N">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-example1" translatesAutoresizingMaskIntoConstraints="NO" id="DNQ-aW-O7N">
                                 <rect key="frame" x="122" y="130" width="131" height="131"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="131" id="Wj1-5a-nQ1"/>
@@ -183,8 +183,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="favorite-image-example1" width="94" height="94"/>
         <image name="icCamera" width="22" height="22"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="profile-example1" width="79" height="79"/>
     </resources>
 </document>
