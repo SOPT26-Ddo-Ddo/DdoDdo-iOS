@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33762E41248BFF9200B27FA8 /* ManitoCheck.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33762E40248BFF9200B27FA8 /* ManitoCheck.storyboard */; };
 		7FB929A7248BD4CD00798CC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB929A6248BD4CD00798CC2 /* AppDelegate.swift */; };
 		7FB929A9248BD4CD00798CC2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB929A8248BD4CD00798CC2 /* SceneDelegate.swift */; };
 		7FB929AB248BD4CD00798CC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB929AA248BD4CD00798CC2 /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		1C3E5F54BDC793232095A59C /* Pods_DdoDdo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DdoDdo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		33762E40248BFF9200B27FA8 /* ManitoCheck.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ManitoCheck.storyboard; sourceTree = "<group>"; };
 		7FB929A3248BD4CD00798CC2 /* DdoDdo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DdoDdo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FB929A6248BD4CD00798CC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FB929A8248BD4CD00798CC2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				7FB929AC248BD4CD00798CC2 /* Main.storyboard */,
 				7FB929B1248BD4D000798CC2 /* LaunchScreen.storyboard */,
 				7FB929CB248BF9F300798CC2 /* Home.storyboard */,
+				33762E40248BFF9200B27FA8 /* ManitoCheck.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33762E41248BFF9200B27FA8 /* ManitoCheck.storyboard in Resources */,
 				7FB929B3248BD4D000798CC2 /* LaunchScreen.storyboard in Resources */,
 				7FB929B0248BD4D000798CC2 /* Assets.xcassets in Resources */,
 				7FB929AE248BD4CD00798CC2 /* Main.storyboard in Resources */,
