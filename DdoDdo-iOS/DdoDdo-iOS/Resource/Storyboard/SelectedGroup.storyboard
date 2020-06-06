@@ -11,14 +11,14 @@
         <!--Selected Group View Controller-->
         <scene sceneID="sd0-9f-Whk">
             <objects>
-                <viewController id="Djm-HK-WWM" customClass="SelectedGroupViewController" customModule="DdoDdo_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectedGroupVC" id="Djm-HK-WWM" customClass="SelectedGroupViewController" customModule="DdoDdo_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jit-kP-wlc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="그룹이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dng-3P-HfA">
-                                <rect key="frame" x="36.000000000000007" y="119" width="69.666666666666686" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="16" y="119" width="69.666666666666671" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -56,7 +56,7 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                     <state key="normal" title="나">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                 </button>
                                             </subviews>
@@ -191,7 +191,7 @@
                             <constraint firstItem="Wly-co-2wy" firstAttribute="top" secondItem="eqP-MR-1aN" secondAttribute="bottom" constant="8" id="fI6-H5-ZnI"/>
                             <constraint firstItem="gEL-AN-v30" firstAttribute="leading" secondItem="9dB-yw-ykF" secondAttribute="trailing" constant="3" id="i8S-1T-hMP"/>
                             <constraint firstItem="rqv-DS-DXB" firstAttribute="baseline" secondItem="3eq-sO-kmW" secondAttribute="baseline" id="mJo-XE-hrj"/>
-                            <constraint firstItem="Dng-3P-HfA" firstAttribute="leading" secondItem="yHn-Ho-8Zk" secondAttribute="leading" constant="36" id="nk0-M5-pzB"/>
+                            <constraint firstItem="Dng-3P-HfA" firstAttribute="leading" secondItem="yHn-Ho-8Zk" secondAttribute="leading" constant="16" id="nk0-M5-pzB"/>
                             <constraint firstItem="rqv-DS-DXB" firstAttribute="leading" secondItem="yHn-Ho-8Zk" secondAttribute="leading" constant="110" id="pRA-OY-MVU"/>
                             <constraint firstItem="fxO-SI-FMd" firstAttribute="leading" secondItem="rqv-DS-DXB" secondAttribute="trailing" constant="3" id="qtX-7Y-brS"/>
                             <constraint firstItem="yu1-nq-mPW" firstAttribute="leading" secondItem="3eq-sO-kmW" secondAttribute="trailing" constant="2" id="vNG-Rn-tpk"/>
@@ -209,7 +209,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Kk-2H-Fgc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-34.399999999999999" y="118.22660098522168"/>
+            <point key="canvasLocation" x="-508" y="86"/>
         </scene>
     </scenes>
     <resources>
