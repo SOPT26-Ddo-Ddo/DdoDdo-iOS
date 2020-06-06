@@ -29,13 +29,14 @@ struct SelectedGroupService {
     private func judge(by statusCode: Int, _ data: Data) -> NetworkResult<Any> { switch statusCode {
     case 200: return isSelectedGroup(by: data)
     case 400: return .pathErr
-    case 500: return .serverErr default: return .networkFail }
+    case 500: return .serverErr
+    default: return .networkFail }
     }
     private func isSelectedGroup(by data: Data) -> NetworkResult<Any> {
         let decoder = JSONDecoder()
         guard let decodedData = try? decoder.decode(SelectedGroupData.self, from: data) else { return .pathErr }
         guard let tokenData = decodedData.data else { return .requestErr(decodedData.message) }
-        return .success((tokenData.groupInfo != nil) && (tokenData.groupUser != nil))
+        return .success(tokenData)
     }
     
 }

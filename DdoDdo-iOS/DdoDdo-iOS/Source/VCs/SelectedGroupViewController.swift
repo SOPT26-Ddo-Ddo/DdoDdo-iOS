@@ -39,14 +39,14 @@ class SelectedGroupViewController: UIViewController {
     
     func setCollectionItems() {
             collectionItems = [
-                "황지은",
-                "이예슬",
-                "이주혁",
+                "안유경",
                 "최상일",
-                "김민지",
-                "김보배",
                 "최선아",
-                "안유경"
+                "이예슬",
+                "김민지",
+                "이주혁",
+                "황지은",
+                "김보배"
             ]
         }
     
@@ -61,10 +61,12 @@ class SelectedGroupViewController: UIViewController {
     }
 
     @IBAction func matchBtn(_ sender: UIButton) {
+        
         SelectedGroupService.shared.GroupSelect() {
             networkResult in switch networkResult {
             case .success(let token):
-                guard let token = token as? String else { return }
+                guard let token = token as? groupDetailInfo else { return }
+                self.numPeopleLabel.text = "\(token.numPeople)"
                 UserDefaults.standard.set(token, forKey: "token")
             case .requestErr(let message):
                     guard let message = message as? String else { return }
