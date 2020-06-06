@@ -60,6 +60,30 @@ struct groupDetailInfo: Codable {
     var fix:Int
     var finish:Int
     var leader:Int
+    
+    enum CodingKeys: String, CodingKey {
+        case groupIdx = "groupIdx"
+        case groupPwd = "groupPwd"
+        case name = "name"
+        case numPeople = "numPeople"
+        case deadLine = "deadLine"
+        case fix = "fix"
+        case finish = "finish"
+        case leader = "leader"
+    }
+    
+    init(from decoder: Decoder) throws {
+           let values = try decoder.container(keyedBy: CodingKeys.self)
+        
+           groupIdx = (try? values.decode(Int.self, forKey: .groupIdx)) ?? -1
+           groupPwd = (try? values.decode(Int.self, forKey: .groupPwd)) ?? -1
+           name = (try? values.decode(String.self, forKey: .name)) ?? ""
+           numPeople = (try? values.decode(Int.self, forKey: .numPeople)) ?? -1
+           deadLine = (try? values.decode(String.self, forKey: .deadLine)) ?? ""
+           fix = (try? values.decode(Int.self, forKey: .fix)) ?? -1
+        finish = (try? values.decode(Int.self, forKey: .finish)) ?? -1
+        leader = (try? values.decode(Int.self, forKey: .leader)) ?? -1
+       }
 }
 
 
