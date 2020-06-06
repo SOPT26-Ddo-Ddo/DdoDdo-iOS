@@ -13,6 +13,7 @@ import Foundation
 import UIKit
 
 extension UIColor {
-    
-
+    @nonobjc class var paleGold: UIColor {
+      return UIColor(red: 1.0, green: 211.0 / 255.0, blue: 107.0 / 255.0, alpha: 1.0)
+    }
 }
