@@ -61,6 +61,16 @@ extension HomeVC : UITableViewDataSource{
     func numberOfSections(in tableView: UITableView) -> Int {
         return testData.count
     }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        var headerTitle : String?
+        if (section == 0){
+            headerTitle = "내 마니또"
+            return headerTitle        }
+        else if (section == 1){
+            headerTitle = "완료된 마니또"
+            return headerTitle
+        }
+    }
 }
 
 extension HomeVC : UITableViewDelegate{
