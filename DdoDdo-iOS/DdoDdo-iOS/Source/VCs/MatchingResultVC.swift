@@ -15,7 +15,7 @@ class MatchingResultVC: UIViewController {
     
     @IBOutlet var infoBgView: UIView!
     @IBOutlet var keywordArray: [UILabel]!
-    var favoriteList = ["#관심", "#관심", "#관심", "#관심"]
+    var favoriteList = ["#고기", "#돈스파이크", "#지민", "#기획"]
     var imageList = ["favorite-image-example1", "favorite-image-example2", "favorite-image-example3", "favorite-image-example4"]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +35,13 @@ class MatchingResultVC: UIViewController {
         
         self.favoriteCollectionView.dataSource = self
         self.favoriteCollectionView.delegate = self
+    }
+    
+    @IBAction func touchUpOKButton(_ sender: UIButton) {
+        
+        self.dismiss(animated: true, completion: {
+            
+        })
     }
     
 }
