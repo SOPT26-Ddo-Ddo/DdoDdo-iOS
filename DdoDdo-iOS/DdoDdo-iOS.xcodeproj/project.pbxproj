@@ -13,6 +13,8 @@
 		33762E47248C13F800B27FA8 /* SelectedGroupProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33762E46248C13F800B27FA8 /* SelectedGroupProfileViewCell.swift */; };
 		33762E4B248C26A600B27FA8 /* SelectedGroupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33762E4A248C26A600B27FA8 /* SelectedGroupData.swift */; };
 		33762E4D248C2CE200B27FA8 /* ManitoResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33762E4C248C2CE200B27FA8 /* ManitoResultData.swift */; };
+		33762E4F248C45BC00B27FA8 /* ManitoCheckVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33762E4E248C45BC00B27FA8 /* ManitoCheckVC.swift */; };
+		33762E51248C469800B27FA8 /* SelectedGroupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33762E50248C469800B27FA8 /* SelectedGroupService.swift */; };
 		7FB929A7248BD4CD00798CC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB929A6248BD4CD00798CC2 /* AppDelegate.swift */; };
 		7FB929A9248BD4CD00798CC2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB929A8248BD4CD00798CC2 /* SceneDelegate.swift */; };
 		7FB929AB248BD4CD00798CC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB929AA248BD4CD00798CC2 /* ViewController.swift */; };
@@ -46,6 +48,8 @@
 		33762E46248C13F800B27FA8 /* SelectedGroupProfileViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectedGroupProfileViewCell.swift; path = "DdoDdo-iOS/Source/VCs/SelectedGroupProfileViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		33762E4A248C26A600B27FA8 /* SelectedGroupData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedGroupData.swift; sourceTree = "<group>"; };
 		33762E4C248C2CE200B27FA8 /* ManitoResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManitoResultData.swift; sourceTree = "<group>"; };
+		33762E4E248C45BC00B27FA8 /* ManitoCheckVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManitoCheckVC.swift; sourceTree = "<group>"; };
+		33762E50248C469800B27FA8 /* SelectedGroupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedGroupService.swift; sourceTree = "<group>"; };
 		7FB929A3248BD4CD00798CC2 /* DdoDdo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DdoDdo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FB929A6248BD4CD00798CC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FB929A8248BD4CD00798CC2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -162,6 +166,7 @@
 				33762E44248C139400B27FA8 /* SelectedGroupViewController.swift */,
 				7FB929D1248C287C00798CC2 /* ResultAfterOKVC.swift */,
 				7FB929D7248C378200798CC2 /* MatchingResultVC.swift */,
+				33762E4E248C45BC00B27FA8 /* ManitoCheckVC.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -217,6 +222,7 @@
 			children = (
 				7FB929C7248BD88F00798CC2 /* APIConstants.swift */,
 				7FB929C9248BD90400798CC2 /* NetworkResult.swift */,
+				33762E50248C469800B27FA8 /* SelectedGroupService.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -345,6 +351,7 @@
 				7FB929D4248C2A6800798CC2 /* ResultAfterOKMemberCell.swift in Sources */,
 				7FB929AB248BD4CD00798CC2 /* ViewController.swift in Sources */,
 				B89C2F35248C02F600034EDB /* HomeVC.swift in Sources */,
+				33762E51248C469800B27FA8 /* SelectedGroupService.swift in Sources */,
 				7FB929DE248C445F00798CC2 /* MatchingResultFavoriteCell.swift in Sources */,
 				33762E47248C13F800B27FA8 /* SelectedGroupProfileViewCell.swift in Sources */,
 				7FB929E0248C521900798CC2 /* ResultAfterOKMissionCell.swift in Sources */,
@@ -354,6 +361,7 @@
 				7FB929A7248BD4CD00798CC2 /* AppDelegate.swift in Sources */,
 				33762E4D248C2CE200B27FA8 /* ManitoResultData.swift in Sources */,
 				33762E4B248C26A600B27FA8 /* SelectedGroupData.swift in Sources */,
+				33762E4F248C45BC00B27FA8 /* ManitoCheckVC.swift in Sources */,
 				7FB929A9248BD4CD00798CC2 /* SceneDelegate.swift in Sources */,
 				7FB929DC248C429400798CC2 /* UIView+Extensions.swift in Sources */,
 				7FB929C3248BD71500798CC2 /* UIColor+Extensions.swift in Sources */,
