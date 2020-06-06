@@ -19,6 +19,7 @@
 		7FB929CA248BD90400798CC2 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB929C9248BD90400798CC2 /* NetworkResult.swift */; };
 		7FB929CC248BF9F300798CC2 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB929CB248BF9F300798CC2 /* Home.storyboard */; };
 		7FB929CE248BFA7B00798CC2 /* ExampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB929CD248BFA7B00798CC2 /* ExampleModel.swift */; };
+		B89C2F35248C02F600034EDB /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C2F34248C02F600034EDB /* HomeVC.swift */; };
 		E2BD402A3F6534A955EDE249 /* Pods_DdoDdo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C3E5F54BDC793232095A59C /* Pods_DdoDdo_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		7FB929CB248BF9F300798CC2 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		7FB929CD248BFA7B00798CC2 /* ExampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleModel.swift; sourceTree = "<group>"; };
 		83C138059DF5F81E09D24E39 /* Pods-DdoDdo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DdoDdo-iOS.debug.xcconfig"; path = "Target Support Files/Pods-DdoDdo-iOS/Pods-DdoDdo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		B89C2F34248C02F600034EDB /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		D6FE401ADCA6305666D63870 /* Pods-DdoDdo-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DdoDdo-iOS.release.xcconfig"; path = "Target Support Files/Pods-DdoDdo-iOS/Pods-DdoDdo-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				7FB929AA248BD4CD00798CC2 /* ViewController.swift */,
+				B89C2F34248C02F600034EDB /* HomeVC.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				7FB929C6248BD7C800798CC2 /* UIImageView+Extensions.swift in Sources */,
 				7FB929AB248BD4CD00798CC2 /* ViewController.swift in Sources */,
 				7FB929CE248BFA7B00798CC2 /* ExampleModel.swift in Sources */,
+				B89C2F35248C02F600034EDB /* HomeVC.swift in Sources */,
 				7FB929C8248BD88F00798CC2 /* APIConstants.swift in Sources */,
 				7FB929A7248BD4CD00798CC2 /* AppDelegate.swift in Sources */,
 				7FB929A9248BD4CD00798CC2 /* SceneDelegate.swift in Sources */,
