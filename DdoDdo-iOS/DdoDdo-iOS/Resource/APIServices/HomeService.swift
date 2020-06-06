@@ -11,6 +11,21 @@ import Alamofire
 
 struct HomeService{
     static let shared = HomeService()
+    func requesToken(completion: @escaping (NetworkResult<Any>) -> Void){
+        let header: HTTPHeaders = ["Content-Type":"application/json"] //Request Header 생성
+        let dataRequest = Alamofire.request(APIConstants.homeTokenURL,method: .get,parameters:
+            nil,encoding: JSONEncoding.default, headers: header)
+        dataRequest.responseData { dataResponse in
+            switch dataResponse.result {
+            case .success:
+                guard let statusCode = dataResponse.response?.statusCode else {return}
+                guard let value = dataResponse.result.value else {return}
+                let networkResult = self.judge(by: statusCode, value)
+                completion(networkResult)
+            case .failure: completion(.networkFail)
+            }
+        }
+    }
     func loadHome(completion: @escaping (NetworkResult<Any>)-> Void){
         let header: HTTPHeaders = ["Content-Type":"application/json"]
         let dataRequest = Alamofire.request(APIConstants.homeURL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header).responseData{

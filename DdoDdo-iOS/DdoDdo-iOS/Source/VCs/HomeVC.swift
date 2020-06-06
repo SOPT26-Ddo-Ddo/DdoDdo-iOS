@@ -135,7 +135,7 @@ extension HomeVC : UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0{
             let sb1 = UIStoryboard.init(name: "SelectedGroup", bundle: nil)
-            if let dvc1 = sb1.instantiateViewController(identifier: "SelectedGroupVC") as? SelectedGroupViewController { self.navigationController?.pushViewController(dvc, animated: true)
+            if let dvc1 = sb1.instantiateViewController(identifier: "SelectedGroupVC") as? SelectedGroupViewController { self.navigationController?.pushViewController(dvc1, animated: true)
             }
         }
         else if indexPath.row == 1{
