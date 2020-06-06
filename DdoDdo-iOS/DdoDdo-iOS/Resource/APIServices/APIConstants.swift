@@ -11,7 +11,7 @@ import Foundation
 
 
 struct APIConstants {
-    static let baseURL = ""
+    static let baseURL = "http://52.78.27.117:3000/"
     
     
 }
