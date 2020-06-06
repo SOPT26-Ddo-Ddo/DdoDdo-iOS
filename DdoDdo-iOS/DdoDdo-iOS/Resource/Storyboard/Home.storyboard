@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="WLL-Ln-DQB">
-                                <rect key="frame" x="0.0" y="372" width="375" height="440"/>
+                                <rect key="frame" x="0.0" y="372" width="375" height="358"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeGroupCell" id="84e-9O-Hsx" customClass="HomeGroupCell" customModule="DdoDdo_iOS" customModuleProvider="target">
@@ -80,12 +80,14 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kqv-V9-Wwa">
-                                <rect key="frame" x="99" y="697" width="177" height="47"/>
+                                <rect key="frame" x="99" y="745" width="177" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="177" id="b7b-fV-NXn"/>
                                     <constraint firstAttribute="height" constant="47" id="tcQ-GX-19c"/>
                                 </constraints>
-                                <state key="normal" title="새 마니또"/>
+                                <state key="normal" title="새 마니또">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="addGroupButton:" destination="OJr-9n-eLw" eventType="touchUpInside" id="FsU-n5-ThV"/>
                                 </connections>
@@ -101,13 +103,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Okl-RM-acc" firstAttribute="bottom" secondItem="Kqv-V9-Wwa" secondAttribute="bottom" constant="34" id="1nW-hp-T8a"/>
+                            <constraint firstAttribute="bottom" secondItem="Kqv-V9-Wwa" secondAttribute="bottom" constant="20" id="1nW-hp-T8a"/>
                             <constraint firstItem="2zG-WH-iBp" firstAttribute="top" secondItem="rqx-AQ-Rou" secondAttribute="top" constant="115" id="9en-cG-cSX"/>
                             <constraint firstItem="DNQ-aW-O7N" firstAttribute="top" secondItem="rqx-AQ-Rou" secondAttribute="top" constant="168" id="E7d-kT-uFQ"/>
                             <constraint firstItem="Kqv-V9-Wwa" firstAttribute="centerX" secondItem="Okl-RM-acc" secondAttribute="centerX" id="Ejv-Ru-f2s"/>
-                            <constraint firstAttribute="bottom" secondItem="WLL-Ln-DQB" secondAttribute="bottom" id="Mv6-Ve-Hqd"/>
                             <constraint firstItem="2zG-WH-iBp" firstAttribute="leading" secondItem="rqx-AQ-Rou" secondAttribute="leading" constant="16" id="N98-v9-sO7"/>
                             <constraint firstItem="WLL-Ln-DQB" firstAttribute="top" secondItem="vfb-8S-4Fn" secondAttribute="bottom" constant="20" id="Q8V-Wb-jDN"/>
+                            <constraint firstAttribute="bottom" secondItem="WLL-Ln-DQB" secondAttribute="bottom" constant="82" id="STI-6g-KSf"/>
                             <constraint firstItem="DNQ-aW-O7N" firstAttribute="leading" secondItem="rqx-AQ-Rou" secondAttribute="leading" constant="122" id="WuL-uu-pxS"/>
                             <constraint firstItem="WLL-Ln-DQB" firstAttribute="trailing" secondItem="Okl-RM-acc" secondAttribute="trailing" id="Z2F-36-hWk"/>
                             <constraint firstItem="WLL-Ln-DQB" firstAttribute="leading" secondItem="Okl-RM-acc" secondAttribute="leading" id="ZwN-1C-xCf"/>
@@ -121,6 +123,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="uDm-dh-FiH"/>
                     <connections>
+                        <outlet property="addGroup" destination="Kqv-V9-Wwa" id="aJn-Tx-ZjB"/>
                         <outlet property="groupTableView" destination="WLL-Ln-DQB" id="7Q3-3R-1HF"/>
                         <outlet property="homeProfileHiLabel" destination="2zG-WH-iBp" id="grQ-g5-RzS"/>
                         <outlet property="homeProfileImageView" destination="DNQ-aW-O7N" id="9Wa-xW-B0n"/>

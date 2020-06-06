@@ -20,6 +20,7 @@ class HomeVC: UIViewController {
     @IBOutlet weak var groupTableView: UITableView!
     @IBAction func addGroupButton(_ sender: Any) {
     }
+    @IBOutlet weak var addGroup: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,8 @@ class HomeVC: UIViewController {
         groupTableView.dataSource = self
         setData()
         setHiLabel()
+        addGroup.backgroundColor = UIColor.paleGold
+        addGroup.layer.cornerRadius = 25
         // Do any additional setup after loading the view.
     }
     private func setData(){
@@ -66,7 +69,7 @@ extension HomeVC : UITableViewDataSource{
         if (section == 0){
             headerTitle = "내 마니또"
             return headerTitle        }
-        else if (section == 1){
+        else{
             headerTitle = "완료된 마니또"
             return headerTitle
         }
