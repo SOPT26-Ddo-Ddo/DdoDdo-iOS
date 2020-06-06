@@ -19,6 +19,7 @@ class SelectedGroupViewController: UIViewController {
     @IBOutlet var matchingBtn: UIButton!
     
     var collectionItems = [String]()
+    var ImageItems = [String]()
 
     
     override func viewDidLoad() {
@@ -28,6 +29,8 @@ class SelectedGroupViewController: UIViewController {
         setCollectionItems()
         matchingBtn.layer.cornerRadius = 24
         setData()
+        self.view.backgroundColor = UIColor.paleGold
+        collectionView.backgroundColor = UIColor.paleGold
 
     }
     
@@ -43,6 +46,10 @@ class SelectedGroupViewController: UIViewController {
                 "안유경"
             ]
         }
+    
+    func setImgItems(){
+        ImageItems = ["","","","","","","","",""]
+    }
     
     func setData(){
         groupNameLabel.text = "아요 왕초보반 스터디"
