@@ -1,4 +1,5 @@
 # 👧🏻 DdoDdo-iOS 👧🏻
+
 🦖10어먹조 🍎아요 짱짱맨🍎들의 마니또👧🏻 뽑기 어플리케이션 🦖
 
 <br>
@@ -15,7 +16,6 @@
 <div style="text-align:right;">
   <img src="./img/logo1.png" width="600" height="600">
 </div>
-
 
 🦕 홈화면 뷰
 
