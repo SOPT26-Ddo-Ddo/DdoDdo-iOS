@@ -10,7 +10,6 @@ import UIKit
 
 class SelectedGroupProfileViewCell: UICollectionViewCell {
     @IBOutlet var profileImageView: UIImageView!
-
     @IBOutlet var profileNameLabel: UILabel!
     @IBOutlet var profileStatusBtn: UIButton!
     
