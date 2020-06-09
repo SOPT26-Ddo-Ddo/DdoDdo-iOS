@@ -10,7 +10,7 @@
         <!--Manito CheckVC-->
         <scene sceneID="cLm-Rd-6FG">
             <objects>
-                <viewController id="qRW-RL-nQA" customClass="ManitoCheckVC" customModule="DdoDdo_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ManitoCheckVC" id="qRW-RL-nQA" customClass="ManitoCheckVC" customModule="DdoDdo_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tBz-40-kyB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

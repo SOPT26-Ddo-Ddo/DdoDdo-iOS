@@ -133,15 +133,18 @@ extension HomeVC : UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0{
-            let sb1 = UIStoryboard.init(name: "SelectedGroup", bundle: nil)
-            if let dvc1 = sb1.instantiateViewController(identifier: "SelectedGroupVC") as? SelectedGroupViewController { self.navigationController?.pushViewController(dvc1, animated: true)
+        switch indexPath.section {
+        case 0:
+            let sb = UIStoryboard.init(name: "SelectedGroup", bundle: nil)
+            if let dvc = sb.instantiateViewController(identifier: "SelectedGroupVC") as? SelectedGroupViewController { self.navigationController?.pushViewController(dvc, animated: true)
             }
-        }
-        else if indexPath.row == 1{
-            let sb2 = UIStoryboard.init(name: "ResultAfterOK", bundle: nil)
-            if let dvc2 = sb2.instantiateViewController(identifier: "ResultAfterOKVC") as? ResultAfterOKVC { self.navigationController?.pushViewController(dvc2, animated: true)
+        case 1:
+            let sb = UIStoryboard.init(name: "ManitoCheck", bundle: nil)
+            if let dvc = sb.instantiateViewController(identifier: "ManitoCheckVC") as? ManitoCheckVC {
+                self.navigationController?.pushViewController(dvc, animated: true)
             }
+        default:
+            break
         }
         
     }
