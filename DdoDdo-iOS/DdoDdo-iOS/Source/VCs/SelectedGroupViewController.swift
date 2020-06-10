@@ -55,28 +55,44 @@ class SelectedGroupViewController: UIViewController {
     }
     
     func setData(){
-        groupNameLabel.text = "아요 왕초보반 스터디"
+        groupNameLabel.text = "버디버디 4조"
         
         
     }
 
     @IBAction func matchBtn(_ sender: UIButton) {
+
+        let matchingStoryboard = UIStoryboard.init(name: "MatchingResult", bundle: nil)
         
-        SelectedGroupService.shared.GroupSelect() {
-            networkResult in switch networkResult {
-            case .success(let token):
-                guard let token = token as? groupDetailInfo else { return }
-                self.numPeopleLabel.text = "\(token.numPeople)"
-                UserDefaults.standard.set(token, forKey: "token")
-            case .requestErr(let message):
-                    guard let message = message as? String else { return }
-                print(message)
-                    
-            case .pathErr: print("path")
-            case .serverErr: print("serverErr")
-            case .networkFail: print("networkFail") }
+        if let dvc = matchingStoryboard.instantiateViewController(identifier: "MatchingResult") as? MatchingResultVC {
+            
+            dvc.modalPresentationStyle = .fullScreen
+            self.present(dvc , animated: true, completion: {
+                let sb = UIStoryboard.init(name: "ResultAfterOK", bundle: nil)
+                
+                if let dvc = sb.instantiateViewController(identifier: "ResultAfterOK") as? ResultAfterOKVC {
+                    print(#function)
+                    self.navigationController?.pushViewController(dvc, animated: true)
+                }
+            })
+
         }
         
+        
+//        SelectedGroupService.shared.GroupSelect() {
+//            networkResult in switch networkResult {
+//            case .success(let token):
+//                guard let token = token as? String else { return }
+//                UserDefaults.standard.set(token, forKey: "token")
+//            case .requestErr(let message):
+//                    guard let message = message as? String else { return }
+//                print(message)
+//
+//            case .pathErr: print("path")
+//            case .serverErr: print("serverErr")
+//            case .networkFail: print("networkFail") }
+//        }
+//
        
     
     }

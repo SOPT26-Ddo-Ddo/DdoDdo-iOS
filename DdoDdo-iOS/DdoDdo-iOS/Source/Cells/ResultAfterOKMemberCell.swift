@@ -12,6 +12,5 @@ class ResultAfterOKMemberCell: UICollectionViewCell {
     static let identifier = "ResultAfterOKMemberCell"
     
     @IBOutlet var profileImageView: UIImageView!
-    
-    @IBOutlet var nameLabel: UILabel!
+
 }

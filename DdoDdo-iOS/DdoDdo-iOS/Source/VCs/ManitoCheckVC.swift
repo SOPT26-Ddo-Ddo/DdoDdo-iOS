@@ -17,6 +17,7 @@ class ManitoCheckVC: UIViewController {
     }
     
     @IBAction func okBtn(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     
