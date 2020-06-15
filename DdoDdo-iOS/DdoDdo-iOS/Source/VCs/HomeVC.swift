@@ -9,10 +9,9 @@
 import UIKit
 
 class HomeVC: UIViewController {
-    
-    private var testData:[[String]] = []
-    var userName :String = "안유경"
-    var profileData: ProfileData?
+    private var homeUserData:ProfileData?
+    //private var testData:[[String]] = []
+    //var userName :String = "안유경"
     @IBOutlet weak var topSearchButton: UIButton!
     
     @IBOutlet weak var homeProfileHiLabel: UILabel!
@@ -28,40 +27,42 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         self.view.backgroundColor = UIColor.paleGold
         super.viewDidLoad()
+        HomeService.shared.loadHome(){ networkResult in
+            switch networkResult{
+            case .success(let homeData):
+                print(homeData)
+                guard let homedata = homeData as? ProfileData else{return}
+                self.homeUserData = homedata
+                DispatchQueue.main.async {
+                    self.groupTableView.reloadData()
+                    self.setProfileLabel()
+                }
+            case .requestErr(let message):
+                guard let message = message as? String else {return}
+                print(message)
+            case .serverErr: print("serverErr")
+            case .pathErr:
+                print("pathErr")
+            case .networkFail:
+                print("networkFail")
+            }
+                
+        }
+            
+        
+   
         groupTableView.delegate = self
         groupTableView.dataSource = self
-        setData()
-        setHiLabel()
+        //setData()
+        
         addGroup.backgroundColor = UIColor.paleGold
         addGroup.layer.cornerRadius = 25
         // Do any additional setup after loading the view.
     }
-    private func setData(){
-        testData = [["버디버디 4조","솝트 최강 디자인 파트","또또"],["버디버디 7조","복소사를 사랑하는 모임"]]
-        HomeService.shared.loadHome { networkResult in
-            switch networkResult{
-            case .success(let data):
-                guard let pdata = data as? ProfileData else {
-                    return
-                }
-                self.profileData = pdata
-                print(self.profileData ?? "")
-            case .requestErr(let msg):
-                print(msg)
-            case .networkFail:
-                break
-            case .pathErr:
-                break
-            case .serverErr:
-                break
-            default:
-                break
-            }
-        }
-        
-    }
-    private func setHiLabel(){
-        homeProfileHiLabel.text = "\(userName)님 안녕하세요!"
+    
+    private func setProfileLabel(){
+        homeProfileHiLabel.text = "\(homeUserData?.name ?? "")님 안녕하세요!"
+        homeProfileTextView.text = homeUserData?.profileMsg ?? ""
     }
     /*
     // MARK: - Navigation
@@ -77,16 +78,23 @@ class HomeVC: UIViewController {
 
 extension HomeVC : UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return testData[section].count
+        if section == 0{
+            
+            return homeUserData?.groupOn.count ?? 0
+        }
+        else{
+            return homeUserData?.groupOff.count ?? 0
+        }
+    
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let groupCell = tableView.dequeueReusableCell(withIdentifier: HomeGroupCell.identifier) as? HomeGroupCell else {return UITableViewCell()}
-        groupCell.setGroupName(groupName: testData[indexPath.section][indexPath.row])
+        groupCell.groupName.text = homeUserData?.groupOn[indexPath.row].name
         
         return groupCell
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return testData.count
+        return 2
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerLabel = UILabel()
@@ -136,11 +144,14 @@ extension HomeVC : UITableViewDelegate{
         switch indexPath.section {
         case 0:
             let sb = UIStoryboard.init(name: "SelectedGroup", bundle: nil)
-            if let dvc = sb.instantiateViewController(identifier: "SelectedGroupVC") as? SelectedGroupViewController { self.navigationController?.pushViewController(dvc, animated: true)
+            if let dvc = sb.instantiateViewController(identifier: "SelectedGroupVC") as? SelectedGroupViewController {
+                //dvc.groupIdx = homeUserData?.groupOn[indexPath.row].groupIdx
+                self.navigationController?.pushViewController(dvc, animated: true)
             }
         case 1:
             let sb = UIStoryboard.init(name: "ManitoCheck", bundle: nil)
             if let dvc = sb.instantiateViewController(identifier: "ManitoCheckVC") as? ManitoCheckVC {
+                //dvc.groupIdx = homeUserData?.groupOff[indexPath.row].groupIdx
                 self.navigationController?.pushViewController(dvc, animated: true)
             }
         default:

@@ -73,8 +73,6 @@
                                     <constraint firstAttribute="height" constant="44" id="0Mq-tf-i5g"/>
                                     <constraint firstAttribute="width" constant="170" id="PUg-Tc-yBj"/>
                                 </constraints>
-                                <string key="text">저는 곱창과 넷플릭스 그리고
-고양이를 좋아해요 :)</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

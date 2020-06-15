@@ -9,28 +9,14 @@
 import Foundation
 import Alamofire
 
+
 struct HomeService{
     static let shared = HomeService()
-    func requesToken(completion: @escaping (NetworkResult<Any>) -> Void){
-        let header: HTTPHeaders = ["Content-Type":"application/json"] //Request Header 생성
-        let dataRequest = Alamofire.request(APIConstants.homeTokenURL,method: .get,parameters:
-            nil,encoding: JSONEncoding.default, headers: header)
-        dataRequest.responseData { dataResponse in
-            switch dataResponse.result {
-            case .success:
-                guard let statusCode = dataResponse.response?.statusCode else {return}
-                guard let value = dataResponse.result.value else {return}
-                let networkResult = self.judge(by: statusCode, value)
-                completion(networkResult)
-            case .failure: completion(.networkFail)
-            }
-        }
-    }
     func loadHome(completion: @escaping (NetworkResult<Any>)-> Void){
-        let header: HTTPHeaders = ["Content-Type":"application/json"]
+        let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZHgiOjQ4LCJuYW1lIjoi7J207JiI7IqsIiwicHJvZmlsZU1zZyI6Iu2VmOydtO2VmOydtOyViOuGjeuNpeuLpOuNlOybjCIsImlhdCI6MTU5MjIwNDI2MSwiZXhwIjoxNTkyMjQ3NDYxLCJpc3MiOiJib2JhZSJ9.TYR2qf8Kp2uTe7UzA2-kfPYT4ILk_GFbZXbBNBtk2f4"
+        let header: HTTPHeaders = ["Content-Type":"application/json","token":token]
         let dataRequest = Alamofire.request(APIConstants.homeURL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header).responseData{
             response in
-       
             switch response.result {
             case .success:
                 guard let statusCode = response.response?.statusCode else {return}
@@ -46,7 +32,7 @@ struct HomeService{
     private func judge(by statusCode:Int, _ data:Data) -> NetworkResult<Any> {
         switch statusCode {
         case 200:
-            return isToken(by: data)
+            return decodingHome(by : data)
         case 400:
             return .pathErr
         case 500:
@@ -54,16 +40,14 @@ struct HomeService{
         default: return .networkFail
         }
     }
-    private func isToken(by data:Data) -> NetworkResult<Any> {
+    private func decodingHome(by data:Data) -> NetworkResult<Any> {
         let decoder = JSONDecoder()
-        guard let decodeData = try? decoder.decode(HomeData.self, from: data) else
+        guard let decodedData = try? decoder.decode(HomeData.self, from: data) else
         {return .pathErr}
-        if decodeData.success == true{
-            return .success(decodeData.data)
-        }
-        else{
-            return .requestErr(decodeData.message)
-        }
+        guard let homeInfo = decodedData.data else {
+            //print("여기")
+            return .requestErr(decodedData.message)}
+        return .success(homeInfo)
     }
 }
 
