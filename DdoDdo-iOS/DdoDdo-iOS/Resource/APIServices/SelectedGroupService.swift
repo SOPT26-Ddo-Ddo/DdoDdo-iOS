@@ -10,32 +10,53 @@ import Alamofire
 
 
 struct SelectedGroupService {
-    static let shared = SelectedGroupService()
+    static let groupShared = SelectedGroupService()
    
-    func GroupSelect(completion: @escaping (NetworkResult<Any>) -> Void) {
-        let header: HTTPHeaders = ["Content-Type": "application/json"]
-        let dataRequest = Alamofire.request(APIConstants.SelectedGroupURL, method: .get, encoding:JSONEncoding.default, headers: header)
-        dataRequest.responseData { dataResponse in switch dataResponse.result {
-        case .success:
-            guard let statusCode = dataResponse.response?.statusCode else { return }
-            guard let value = dataResponse.result.value else { return }
-            let networkResult = self.judge(by: statusCode, value)
+    private func makeParameter(_ groupIdx: String) -> Parameters { return ["groupIdx": groupIdx]
+    }
+    
+    func GroupSelect(groupIdx:String,completion: @escaping ( NetworkResult<Any>) -> Void ) {
+      
+
+        let header: HTTPHeaders = ["Content-Type":"application/json"]
+        let dataRequest = Alamofire.request(APIConstants.SelectedGroupURL + "\(groupIdx)",method: .get, parameters: makeParameter(groupIdx), encoding: JSONEncoding.default, headers: header)
+           
+        
+        dataRequest.responseJSON { dataResponse in
+           switch dataResponse.result {
+           case .success:
+            guard let statusCode = dataResponse.response?.statusCode else {return}
+            guard let value = dataResponse.result.value else {return}
+            
+            let networkResult = self.judge(by: statusCode, value as! Data)
             completion(networkResult)
-        case .failure: completion(.networkFail)
+           
+           case .failure: completion(.networkFail)
             }
             
         }
+           
     }
-    private func judge(by statusCode: Int, _ data: Data) -> NetworkResult<Any> { switch statusCode {
-    case 200: return isSelectedGroup(by: data)
-    case 400: return .pathErr
-    case 500: return .serverErr default: return .networkFail }
+            private func judge(by statusCode: Int, _ data: Data) -> NetworkResult<Any> { switch statusCode {
+            case 200: return isGroupExist(by: data)
+            case 400: return .pathErr
+            case 500: return .serverErr default: return .networkFail }
+           
     }
-    private func isSelectedGroup(by data: Data) -> NetworkResult<Any> {
-        let decoder = JSONDecoder()
-        guard let decodedData = try? decoder.decode(SelectedGroupData.self, from: data) else { return .pathErr }
+           
+    private func isGroupExist(by data: Data) -> NetworkResult<Any> {
+            let decoder = JSONDecoder()
+            guard let decodedData = try? decoder.decode(SelectedGroupData.self, from: data) else { return .pathErr }
         guard let tokenData = decodedData.data else { return .requestErr(decodedData.message) }
-        return .success((tokenData.groupInfo != nil) && (tokenData.groupUser != nil))
+        return .success(tokenData.self)
+            
     }
     
 }
+
+
+
+
+
+
+

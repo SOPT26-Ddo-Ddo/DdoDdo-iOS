@@ -12,6 +12,7 @@ import Alamofire
 class SelectedGroupViewController: UIViewController {
     
 
+    
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var groupNameLabel: UILabel!
     @IBOutlet var collectionView: UICollectionView!
@@ -34,19 +35,24 @@ class SelectedGroupViewController: UIViewController {
         collectionView.backgroundColor = UIColor.paleGold
         matchingBtn.backgroundColor = UIColor.paleGold
         setImgItems()
+        
+        
+        
+        
+        
 
     }
     
     func setCollectionItems() {
             collectionItems = [
-                "황지은",
-                "이예슬",
-                "이주혁",
+                "안유경",
                 "최상일",
-                "김민지",
-                "김보배",
                 "최선아",
-                "안유경"
+                "이예슬",
+                "김민지",
+                "이주혁",
+                "황지은",
+                "김보배"
             ]
         }
     
@@ -61,6 +67,7 @@ class SelectedGroupViewController: UIViewController {
     }
 
     @IBAction func matchBtn(_ sender: UIButton) {
+
         let matchingStoryboard = UIStoryboard.init(name: "MatchingResult", bundle: nil)
         
         if let dvc = matchingStoryboard.instantiateViewController(identifier: "MatchingResult") as? MatchingResultVC {
@@ -74,6 +81,7 @@ class SelectedGroupViewController: UIViewController {
                     self.navigationController?.pushViewController(dvc, animated: true)
                 }
             })
+
         }
         
         

@@ -146,7 +146,6 @@
 			children = (
 				7FB929C0248BD6C200798CC2 /* Storyboard */,
 				7FB929C4248BD76A00798CC2 /* APIServices */,
-				7FB929AF248BD4D000798CC2 /* Assets.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -156,6 +155,7 @@
 			children = (
 				7FB929A6248BD4CD00798CC2 /* AppDelegate.swift */,
 				7FB929A8248BD4CD00798CC2 /* SceneDelegate.swift */,
+				7FB929AF248BD4D000798CC2 /* Assets.xcassets */,
 				7FB929BF248BD6AF00798CC2 /* Extensions */,
 				7FB929BE248BD6A100798CC2 /* Models */,
 				7FB929BD248BD68700798CC2 /* Cells */,

@@ -9,6 +9,7 @@
 <div style="text-align:left;">
   <img src="./img/logo2.png" width="600" height="600">
 </div>
+
 <br>
 
 #### 🦖🦖 또또와 함께해봐! " 👧🏻🤝👦🏻 "
@@ -16,6 +17,7 @@
 <div style="text-align:right;">
   <img src="./img/logo1.png" width="600" height="600">
 </div>
+
 
 🦕 홈화면 뷰
 
@@ -69,3 +71,4 @@
 
 - 홈화면에서 진행중 마니또가 아닌 완료된 마니또 그룹을 선택하면 나를 챙겨준 마니또의 프로필을 볼 수 있다.
 - 확인 버튼을 통해서 뒤로 돌아간다.
+
