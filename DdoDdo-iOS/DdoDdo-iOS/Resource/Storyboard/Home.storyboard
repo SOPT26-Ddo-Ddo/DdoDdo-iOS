@@ -68,10 +68,9 @@
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfb-8S-4Fn">
-                                <rect key="frame" x="102.66666666666669" y="282" width="170" height="44"/>
+                                <rect key="frame" x="100" y="282" width="175" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="0Mq-tf-i5g"/>
-                                    <constraint firstAttribute="width" constant="170" id="PUg-Tc-yBj"/>
                                 </constraints>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
@@ -145,6 +144,8 @@
                             <constraint firstAttribute="trailing" secondItem="KeG-2g-xQi" secondAttribute="trailing" constant="130" id="tIV-Iw-zKm"/>
                             <constraint firstItem="vfb-8S-4Fn" firstAttribute="centerX" secondItem="Okl-RM-acc" secondAttribute="centerX" id="ujk-wj-Ikw"/>
                             <constraint firstItem="vfb-8S-4Fn" firstAttribute="top" secondItem="DNQ-aW-O7N" secondAttribute="bottom" constant="21" id="uun-Yi-sZi"/>
+                            <constraint firstItem="Okl-RM-acc" firstAttribute="trailing" secondItem="vfb-8S-4Fn" secondAttribute="trailing" constant="100" id="whf-4w-cQr"/>
+                            <constraint firstItem="vfb-8S-4Fn" firstAttribute="leading" secondItem="Okl-RM-acc" secondAttribute="leading" constant="100" id="yGy-2h-x1z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Okl-RM-acc"/>
                     </view>

@@ -13,7 +13,7 @@ import Alamofire
 struct HomeService{
     static let shared = HomeService()
     func loadHome(completion: @escaping (NetworkResult<Any>)-> Void){
-        let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZHgiOjQ4LCJuYW1lIjoi7J207JiI7IqsIiwicHJvZmlsZU1zZyI6Iu2VmOydtO2VmOydtOyViOuGjeuNpeuLpOuNlOybjCIsImlhdCI6MTU5MjIwNDI2MSwiZXhwIjoxNTkyMjQ3NDYxLCJpc3MiOiJib2JhZSJ9.TYR2qf8Kp2uTe7UzA2-kfPYT4ILk_GFbZXbBNBtk2f4"
+        let token = UserDefaults.standard.string(forKey: "token") ?? ""
         let header: HTTPHeaders = ["Content-Type":"application/json","token":token]
         let dataRequest = Alamofire.request(APIConstants.homeURL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header).responseData{
             response in
