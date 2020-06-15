@@ -16,12 +16,11 @@ class LoginVC: UIViewController {
     // MARK:- IBOutlet
     @IBOutlet var loginButton: UIButton!
     @IBOutlet var logoImageView: UIImageView!
-    
-    
     @IBOutlet var idTextField: UITextField!
     @IBOutlet var pwTextField: UITextField!
-    
     @IBOutlet var stackViewConstraintY: NSLayoutConstraint!
+    
+    
     // MARK:- LifeCycle Method
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +50,7 @@ class LoginVC: UIViewController {
                                     radius: 6)
     }
     
-    // https://nsios.tistory.com/17?category=803407
+
     //MARK:- Set Gesture
     func initGestureRecognizer() {
         let textFieldTap = UITapGestureRecognizer(target: self, action: #selector(handleTapTextField(_:)))
@@ -64,7 +63,7 @@ class LoginVC: UIViewController {
         self.idTextField.resignFirstResponder()
         self.pwTextField.resignFirstResponder()
     }
-    
+    // https://nsios.tistory.com/17?category=803407
     // MARK:- Keyboard Notification Selector Method
     // keyboard가 보여질 때 어떤 동작을 수행
     @objc func keyboardWillShow(_ notification: NSNotification) {
@@ -126,7 +125,12 @@ class LoginVC: UIViewController {
     //MARK:- IBAction Method
     
     @IBAction func touchUpLoginButton(_ sender: UIButton) {
+
+        guard idTextField.hasText && pwTextField.hasText else {
+            return
+        }
         
+        AuthService.shared.login(id: self.idTextField.text!, pw: self.pwTextField.text!)
     }
     
 }
