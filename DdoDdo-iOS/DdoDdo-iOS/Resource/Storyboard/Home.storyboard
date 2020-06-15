@@ -60,7 +60,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="favorite-image-example1" translatesAutoresizingMaskIntoConstraints="NO" id="DNQ-aW-O7N">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-example1" translatesAutoresizingMaskIntoConstraints="NO" id="DNQ-aW-O7N">
                                 <rect key="frame" x="122" y="130" width="131" height="131"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="131" id="Wj1-5a-nQ1"/>
@@ -73,8 +73,6 @@
                                     <constraint firstAttribute="height" constant="44" id="0Mq-tf-i5g"/>
                                     <constraint firstAttribute="width" constant="170" id="PUg-Tc-yBj"/>
                                 </constraints>
-                                <string key="text">저는 곱창과 넷플릭스 그리고
-고양이를 좋아해요 :)</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -183,8 +181,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="favorite-image-example1" width="94" height="94"/>
         <image name="icCamera" width="22" height="22"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="profile-example1" width="79" height="79"/>
     </resources>
 </document>
