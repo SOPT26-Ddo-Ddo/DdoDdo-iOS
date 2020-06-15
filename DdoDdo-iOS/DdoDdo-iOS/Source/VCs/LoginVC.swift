@@ -16,12 +16,11 @@ class LoginVC: UIViewController {
     // MARK:- IBOutlet
     @IBOutlet var loginButton: UIButton!
     @IBOutlet var logoImageView: UIImageView!
-    
-    
     @IBOutlet var idTextField: UITextField!
     @IBOutlet var pwTextField: UITextField!
-    
     @IBOutlet var stackViewConstraintY: NSLayoutConstraint!
+    
+    
     // MARK:- LifeCycle Method
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +50,7 @@ class LoginVC: UIViewController {
                                     radius: 6)
     }
     
-    // https://nsios.tistory.com/17?category=803407
+
     //MARK:- Set Gesture
     func initGestureRecognizer() {
         let textFieldTap = UITapGestureRecognizer(target: self, action: #selector(handleTapTextField(_:)))
@@ -64,7 +63,7 @@ class LoginVC: UIViewController {
         self.idTextField.resignFirstResponder()
         self.pwTextField.resignFirstResponder()
     }
-    
+    // https://nsios.tistory.com/17?category=803407
     // MARK:- Keyboard Notification Selector Method
     // keyboard가 보여질 때 어떤 동작을 수행
     @objc func keyboardWillShow(_ notification: NSNotification) {
@@ -127,6 +126,34 @@ class LoginVC: UIViewController {
     
     @IBAction func touchUpLoginButton(_ sender: UIButton) {
         
+        guard idTextField.hasText && pwTextField.hasText else {
+            return
+        }
+        
+        AuthService.shared.login(id: self.idTextField.text!, pw: self.pwTextField.text!) { result in
+            switch result {
+            case .success(let jwt):
+                guard let token = jwt as? String else {
+                    return
+                }
+                UserDefaults.standard.set(token, forKey: "token")
+                let sb = UIStoryboard.init(name: "Home", bundle: nil)
+                if let dvc = sb.instantiateViewController(identifier: "HomeVC") as? UINavigationController {
+                    dvc.modalPresentationStyle = .fullScreen
+                    self.present(dvc, animated: true)
+                }
+                
+            case .requestErr(let msg):
+                self.simpleAlert(title: "로그인 실패", message: msg as! String)
+                
+            case .pathErr:
+                break
+            case .serverErr:
+                break
+            case .networkFail:
+                break
+            }
+        }
     }
     
 }
