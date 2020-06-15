@@ -37,6 +37,7 @@ class HomeVC: UIViewController {
                 DispatchQueue.main.async {
                     self.groupTableView.reloadData()
                     self.setProfileLabel()
+                    self.setProfileImg(homedata.idx)
                 }
             case .requestErr(let message):
                 guard let message = message as? String else {return}
@@ -64,6 +65,19 @@ class HomeVC: UIViewController {
     private func setProfileLabel(){
         homeProfileHiLabel.text = "\(homeUserData?.name ?? "")님 안녕하세요!"
         homeProfileTextView.text = homeUserData?.profileMsg ?? ""
+    }
+    private func setProfileImg(_ userIdx: Int){
+        switch userIdx {
+        case 48:
+            homeProfileImageView.image = UIImage(named:"profile-example4")
+        case 49:
+            homeProfileImageView.image = UIImage(named:"profile-example7")
+        case 50:
+            homeProfileImageView.image = UIImage(named:"profile-example8")
+        default:
+            homeProfileImageView.image = UIImage(named:"AppIcon")
+        }
+        
     }
     /*
     // MARK: - Navigation

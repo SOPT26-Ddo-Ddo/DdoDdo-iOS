@@ -14,6 +14,9 @@ class SelectedGroupViewController: UIViewController {
     private var groupInfoData:groupDetailInfo?
     
     var groupIdx:Int?
+
+    @IBAction func backButton(_ sender: Any) { self.navigationController?.popViewController(animated: true)}
+
     
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var groupNameLabel: UILabel!
