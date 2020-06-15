@@ -94,24 +94,9 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fuq-mP-yfW">
                                 <rect key="frame" x="124.33333333333334" y="544" width="126.33333333333334" height="14"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="계정이">
+                                    <fragment content="계정이 없으신가요? ">
                                         <attributes>
-                                            <font key="NSFont" size="11" name=".AppleSDGothicNeoI-Regular"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content=" ">
-                                        <attributes>
-                                            <font key="NSFont" metaFont="controlContent" size="11"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="없으신가요">
-                                        <attributes>
-                                            <font key="NSFont" size="11" name=".AppleSDGothicNeoI-Regular"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="? ">
-                                        <attributes>
-                                            <font key="NSFont" metaFont="controlContent" size="11"/>
+                                            <font key="NSFont" metaFont="message" size="11"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="회원가입">
