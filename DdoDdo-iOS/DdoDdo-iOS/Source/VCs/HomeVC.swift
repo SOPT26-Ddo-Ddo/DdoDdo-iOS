@@ -9,6 +9,7 @@
 import UIKit
 
 class HomeVC: UIViewController {
+    
     private var homeUserData:ProfileData?
     //private var testData:[[String]] = []
     //var userName :String = "안유경"
@@ -145,13 +146,13 @@ extension HomeVC : UITableViewDelegate{
         case 0:
             let sb = UIStoryboard.init(name: "SelectedGroup", bundle: nil)
             if let dvc = sb.instantiateViewController(identifier: "SelectedGroupVC") as? SelectedGroupViewController {
-                //dvc.groupIdx = homeUserData?.groupOn[indexPath.row].groupIdx
+                dvc.groupIdx = homeUserData?.groupOn[indexPath.row].groupIdx
                 self.navigationController?.pushViewController(dvc, animated: true)
             }
         case 1:
             let sb = UIStoryboard.init(name: "ManitoCheck", bundle: nil)
             if let dvc = sb.instantiateViewController(identifier: "ManitoCheckVC") as? ManitoCheckVC {
-                //dvc.groupIdx = homeUserData?.groupOff[indexPath.row].groupIdx
+               // dvc.groupIdx = homeUserData?.groupOff[indexPath.row].groupIdx
                 self.navigationController?.pushViewController(dvc, animated: true)
             }
         default:

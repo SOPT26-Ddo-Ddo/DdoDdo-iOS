@@ -167,6 +167,15 @@
                                 <rect key="frame" x="26" y="552" width="320" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXi-Aa-MTd">
+                                <rect key="frame" x="16" y="70.000000000000114" width="12.333333333333336" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="chevron.left" catalog="system"/>
+                                <connections>
+                                    <action selector="backBtn:" destination="Djm-HK-WWM" eventType="touchUpInside" id="LtA-nz-AWc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -214,6 +223,7 @@
     </scenes>
     <resources>
         <image name="character_logo-1" width="2953" height="2953"/>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="radiusbg" width="405" height="456"/>
         <image name="slider-example" width="357" height="51"/>
     </resources>
