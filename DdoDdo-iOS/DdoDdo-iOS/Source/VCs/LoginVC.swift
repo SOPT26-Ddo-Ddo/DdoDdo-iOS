@@ -125,12 +125,35 @@ class LoginVC: UIViewController {
     //MARK:- IBAction Method
     
     @IBAction func touchUpLoginButton(_ sender: UIButton) {
-
+        
         guard idTextField.hasText && pwTextField.hasText else {
             return
         }
         
-        AuthService.shared.login(id: self.idTextField.text!, pw: self.pwTextField.text!)
+        AuthService.shared.login(id: self.idTextField.text!, pw: self.pwTextField.text!) { result in
+            switch result {
+            case .success(let jwt):
+                guard let token = jwt as? String else {
+                    return
+                }
+                UserDefaults.standard.set(token, forKey: "token")
+                let sb = UIStoryboard.init(name: "Home", bundle: nil)
+                if let dvc = sb.instantiateViewController(identifier: "HomeVC") as? UINavigationController {
+                    dvc.modalPresentationStyle = .fullScreen
+                    self.present(dvc, animated: true)
+                }
+                
+            case .requestErr(let msg):
+                self.simpleAlert(title: "로그인 실패", message: msg as! String)
+                
+            case .pathErr:
+                break
+            case .serverErr:
+                break
+            case .networkFail:
+                break
+            }
+        }
     }
     
 }

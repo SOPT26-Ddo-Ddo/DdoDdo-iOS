@@ -165,7 +165,7 @@
         <!--Navigation Controller-->
         <scene sceneID="REY-nW-bBN">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="izW-lN-USV" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomeVC" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="izW-lN-USV" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Kle-nc-smr">
                         <autoresizingMask key="autoresizingMask"/>

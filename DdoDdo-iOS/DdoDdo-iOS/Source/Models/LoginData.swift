@@ -13,7 +13,7 @@ struct LoginData: Codable {
     var status: Int
     var success: Bool
     var message: String
-    var data: MyManitoInfo?
+    var data: TokenData?
     
     enum CodingKeys: String, CodingKey {
         case status = "status"
@@ -27,7 +27,7 @@ struct LoginData: Codable {
            status = (try? values.decode(Int.self, forKey: .status)) ?? -1
            success = (try? values.decode(Bool.self, forKey: .success)) ?? false
            message = (try? values.decode(String.self, forKey: .message)) ?? ""
-           data = (try? values.decode(MyManitoInfo.self, forKey: .data)) ?? nil
+           data = (try? values.decode(TokenData.self, forKey: .data)) ?? nil
        }
 }
 

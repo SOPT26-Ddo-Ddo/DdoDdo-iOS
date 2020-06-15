@@ -12,7 +12,7 @@ import Alamofire
 struct AuthService {
     static let shared = AuthService()
     
-    func login(id: String, pw: String){
+    func login(id: String, pw: String, completion: @escaping (NetworkResult<Any>) -> Void){
         
         let header: HTTPHeaders = ["Content-Type": "application/json"]
         
@@ -30,26 +30,33 @@ struct AuthService {
                 guard let value = response.result.value else {
                     return
                 }
-                print(statusCode)
+                completion(self.isCorrectUser(statusCode: statusCode, data: value))
             case .failure(let err):
                 print(err.localizedDescription)
-
+                completion(.networkFail)
             }
         }
     }
     
     private func isCorrectUser(statusCode: Int, data: Data) -> NetworkResult<Any> {
+        let decoder = JSONDecoder()
+        guard let decodedData = try? decoder.decode(LoginData.self, from: data) else {
+            return .pathErr
+        }
+        guard let tokenData = decodedData.data else {
+            return .requestErr(decodedData.message)
+        }
+        
         switch statusCode {
         case 200..<300:
-            return .success(<#T##Any#>)
+            return .success(tokenData.accessToken)
         case 300..<400:
             return .pathErr
         case 400..<500:
-            return .requestErr("로그인 실패")
+            return .requestErr(decodedData.message)
         default:
-            break
+            return .pathErr
         }
-        
-        return .networkFail
+    
     }
 }
