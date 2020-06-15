@@ -9,10 +9,9 @@
 import Foundation
 
 
-
 struct APIConstants {
     static let baseURL = "http://52.78.27.117:3000/"
     static let homeURL = baseURL + "home"
     static let homeTokenURL = baseURL + "token"
-    static let SelectedGroupURL = "http://52.78.27.117:3000/group/11"
+    static let SelectedGroupURL = "http://52.78.27.117:3000/group/"
 }

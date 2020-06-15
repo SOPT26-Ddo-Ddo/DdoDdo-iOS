@@ -12,6 +12,7 @@ import Alamofire
 class SelectedGroupViewController: UIViewController {
     
 
+    
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var groupNameLabel: UILabel!
     @IBOutlet var collectionView: UICollectionView!
@@ -34,6 +35,11 @@ class SelectedGroupViewController: UIViewController {
         collectionView.backgroundColor = UIColor.paleGold
         matchingBtn.backgroundColor = UIColor.paleGold
         setImgItems()
+        
+        
+        
+        
+        
 
     }
     
