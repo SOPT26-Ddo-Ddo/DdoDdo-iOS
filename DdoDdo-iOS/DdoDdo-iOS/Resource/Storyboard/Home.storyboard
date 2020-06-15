@@ -27,10 +27,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o95-lg-6eE">
-                                                    <rect key="frame" x="36" y="3" width="131" height="16.333333333333332"/>
+                                                    <rect key="frame" x="36" y="3" width="239" height="16.333333333333332"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="16" id="8ZD-5N-l74"/>
-                                                        <constraint firstAttribute="width" constant="131" id="RME-Ls-1Xz"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.50588235290000005" green="0.50588235290000005" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -40,6 +39,7 @@
                                             <constraints>
                                                 <constraint firstItem="o95-lg-6eE" firstAttribute="top" secondItem="exF-sV-IpY" secondAttribute="top" constant="3" id="32V-T2-bFM"/>
                                                 <constraint firstAttribute="bottom" secondItem="o95-lg-6eE" secondAttribute="bottom" constant="3" id="3xg-kc-p7R"/>
+                                                <constraint firstAttribute="trailing" secondItem="o95-lg-6eE" secondAttribute="trailing" constant="100" id="ABD-eE-ov3"/>
                                                 <constraint firstItem="o95-lg-6eE" firstAttribute="centerY" secondItem="exF-sV-IpY" secondAttribute="centerY" id="LaN-fw-Hbk"/>
                                                 <constraint firstItem="o95-lg-6eE" firstAttribute="leading" secondItem="exF-sV-IpY" secondAttribute="leading" constant="36" id="b5F-0o-bVn"/>
                                             </constraints>
@@ -67,7 +67,7 @@
                                     <constraint firstAttribute="width" constant="131" id="xkg-z7-l4l"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfb-8S-4Fn">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfb-8S-4Fn">
                                 <rect key="frame" x="100" y="282" width="175" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="0Mq-tf-i5g"/>
@@ -142,7 +142,6 @@
                             <constraint firstItem="Okl-RM-acc" firstAttribute="trailing" secondItem="Ifo-Jx-Xm8" secondAttribute="trailing" constant="16" id="mxA-dJ-0Yo"/>
                             <constraint firstAttribute="trailing" secondItem="DNQ-aW-O7N" secondAttribute="trailing" constant="122" id="p7E-c0-XoM"/>
                             <constraint firstAttribute="trailing" secondItem="KeG-2g-xQi" secondAttribute="trailing" constant="130" id="tIV-Iw-zKm"/>
-                            <constraint firstItem="vfb-8S-4Fn" firstAttribute="centerX" secondItem="Okl-RM-acc" secondAttribute="centerX" id="ujk-wj-Ikw"/>
                             <constraint firstItem="vfb-8S-4Fn" firstAttribute="top" secondItem="DNQ-aW-O7N" secondAttribute="bottom" constant="21" id="uun-Yi-sZi"/>
                             <constraint firstItem="Okl-RM-acc" firstAttribute="trailing" secondItem="vfb-8S-4Fn" secondAttribute="trailing" constant="100" id="whf-4w-cQr"/>
                             <constraint firstItem="vfb-8S-4Fn" firstAttribute="leading" secondItem="Okl-RM-acc" secondAttribute="leading" constant="100" id="yGy-2h-x1z"/>
