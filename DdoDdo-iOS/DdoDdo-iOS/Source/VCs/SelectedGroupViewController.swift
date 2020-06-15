@@ -12,6 +12,7 @@ import Alamofire
 class SelectedGroupViewController: UIViewController {
     
 
+    @IBAction func backButton(_ sender: Any) { self.navigationController?.popViewController(animated: true)}
     
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var groupNameLabel: UILabel!
