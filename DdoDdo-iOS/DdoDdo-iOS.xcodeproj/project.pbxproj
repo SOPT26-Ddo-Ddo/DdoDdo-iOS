@@ -39,6 +39,7 @@
 		7FD2E33A24976F92008DA473 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2E33924976F92008DA473 /* AuthService.swift */; };
 		7FD2E33C2497771E008DA473 /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2E33B2497771E008DA473 /* LoginData.swift */; };
 		7FD2E33E24977F90008DA473 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2E33D24977F90008DA473 /* UIViewController+Extensions.swift */; };
+		7FD2E3402498D43A008DA473 /* GenericResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2E33F2498D43A008DA473 /* GenericResponse.swift */; };
 		B89C2F35248C02F600034EDB /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C2F34248C02F600034EDB /* HomeVC.swift */; };
 		B89C2F45248C166900034EDB /* HomeGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C2F44248C166900034EDB /* HomeGroupCell.swift */; };
 		B89C2F47248C257C00034EDB /* HomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C2F46248C257C00034EDB /* HomeData.swift */; };
@@ -82,6 +83,7 @@
 		7FD2E33924976F92008DA473 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		7FD2E33B2497771E008DA473 /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
 		7FD2E33D24977F90008DA473 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		7FD2E33F2498D43A008DA473 /* GenericResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericResponse.swift; sourceTree = "<group>"; };
 		83C138059DF5F81E09D24E39 /* Pods-DdoDdo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DdoDdo-iOS.debug.xcconfig"; path = "Target Support Files/Pods-DdoDdo-iOS/Pods-DdoDdo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		B89C2F34248C02F600034EDB /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		B89C2F44248C166900034EDB /* HomeGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGroupCell.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				33762E4A248C26A600B27FA8 /* SelectedGroupData.swift */,
 				33762E4C248C2CE200B27FA8 /* ManitoResultData.swift */,
 				7FD2E33B2497771E008DA473 /* LoginData.swift */,
+				7FD2E33F2498D43A008DA473 /* GenericResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				7FB929DC248C429400798CC2 /* UIView+Extensions.swift in Sources */,
 				7FB929C3248BD71500798CC2 /* UIColor+Extensions.swift in Sources */,
 				7FD2E33C2497771E008DA473 /* LoginData.swift in Sources */,
+				7FD2E3402498D43A008DA473 /* GenericResponse.swift in Sources */,
 				7FD2E33E24977F90008DA473 /* UIViewController+Extensions.swift in Sources */,
 				B89C2F45248C166900034EDB /* HomeGroupCell.swift in Sources */,
 				7FB929CA248BD90400798CC2 /* NetworkResult.swift in Sources */,

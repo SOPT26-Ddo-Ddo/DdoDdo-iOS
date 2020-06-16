@@ -167,12 +167,13 @@
                                 <rect key="frame" x="26" y="552" width="320" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gm4-n5-iz5">
-                                <rect key="frame" x="16" y="64" width="13" height="22"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXi-Aa-MTd">
+                                <rect key="frame" x="16" y="70.000000000000114" width="12.333333333333336" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="chevron.left" catalog="system"/>
+                                <state key="normal" backgroundImage="chevron.left" catalog="system"/>
                                 <connections>
-                                    <action selector="backButton:" destination="Djm-HK-WWM" eventType="touchUpInside" id="oxX-p1-Cgn"/>
+                                    <action selector="backBtn:" destination="Djm-HK-WWM" eventType="touchUpInside" id="LtA-nz-AWc"/>
                                 </connections>
                             </button>
                         </subviews>

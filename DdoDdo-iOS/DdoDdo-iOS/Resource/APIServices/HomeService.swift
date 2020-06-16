@@ -13,8 +13,8 @@ import Alamofire
 struct HomeService{
     static let shared = HomeService()
     func loadHome(completion: @escaping (NetworkResult<Any>)-> Void){
-        //let token = UserDefaults.standard.string(forKey: "token") ?? ""
-        let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZHgiOjQ4LCJuYW1lIjoi7J207JiI7IqsIiwicHJvZmlsZU1zZyI6Iu2VmOydtO2VmOydtOyViOuGjeuNpeuLpOuNlOybjCIsImlhdCI6MTU5MjIxODY2NiwiZXhwIjoxNTkyMjYxODY2LCJpc3MiOiJib2JhZSJ9.Ms6bMiTzmKT8yE8pxacJLWYZntyEIClM4A6rvql4fvc"
+        let token = UserDefaults.standard.string(forKey: "token") ?? ""
+        //let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZHgiOjQ4LCJuYW1lIjoi7J207JiI7IqsIiwicHJvZmlsZU1zZyI6Iu2VmOydtO2VmOydtOyViOuGjeuNpeuLpOuNlOybjCIsImlhdCI6MTU5MjIxODY2NiwiZXhwIjoxNTkyMjYxODY2LCJpc3MiOiJib2JhZSJ9.Ms6bMiTzmKT8yE8pxacJLWYZntyEIClM4A6rvql4fvc"
         let header: HTTPHeaders = ["Content-Type":"application/json","token":token]
         let dataRequest = Alamofire.request(APIConstants.homeURL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header).responseData{
             response in

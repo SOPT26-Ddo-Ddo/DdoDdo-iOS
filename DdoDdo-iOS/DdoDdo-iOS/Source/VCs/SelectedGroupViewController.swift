@@ -11,8 +11,12 @@ import Alamofire
 
 class SelectedGroupViewController: UIViewController {
     
+    private var groupInfoData:groupDetailInfo?
+    
+    var groupIdx:Int?
 
     @IBAction func backButton(_ sender: Any) { self.navigationController?.popViewController(animated: true)}
+
     
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var groupNameLabel: UILabel!
@@ -21,7 +25,8 @@ class SelectedGroupViewController: UIViewController {
     @IBOutlet var deadLineLabel: UILabel!
     @IBOutlet var matchingBtn: UIButton!
     
-    var collectionItems = [String]()
+    var collectionItems : [groupUserData] = []
+    var groupName: String?
     var ImageItems = [String]()
 
     
@@ -29,44 +34,36 @@ class SelectedGroupViewController: UIViewController {
         super.viewDidLoad()
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
-        setCollectionItems()
         matchingBtn.layer.cornerRadius = 24
-        setData()
         self.view.backgroundColor = UIColor.paleGold
         collectionView.backgroundColor = UIColor.paleGold
         matchingBtn.backgroundColor = UIColor.paleGold
         setImgItems()
+        networking()
         
-        
-        
-        
-        
+   
 
     }
     
-    func setCollectionItems() {
-            collectionItems = [
-                "안유경",
-                "최상일",
-                "최선아",
-                "이예슬",
-                "김민지",
-                "이주혁",
-                "황지은",
-                "김보배"
-            ]
-        }
+    
     
     func setImgItems(){
         ImageItems = ["profile-example1","profile-example2","profile-example3","profile-example4","profile-example5","profile-example6","profile-example7","profile-example8"]
     }
     
-    func setData(){
-        groupNameLabel.text = "버디버디 4조"
+               
+           
+        
+        
+        
+    
+
+    @IBAction func backBtn(_ sender: UIButton) {
+        
+        self.navigationController?.popViewController(animated: true)
         
         
     }
-
     @IBAction func matchBtn(_ sender: UIButton) {
 
         let matchingStoryboard = UIStoryboard.init(name: "MatchingResult", bundle: nil)
@@ -105,6 +102,7 @@ class SelectedGroupViewController: UIViewController {
     }
 
 }
+    
 
 extension SelectedGroupViewController:UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -113,8 +111,8 @@ extension SelectedGroupViewController:UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SelectedGroupProfileCell", for: indexPath) as? SelectedGroupProfileViewCell else { return UICollectionViewCell() }
-                
-        cell.profileNameLabel.text = collectionItems[indexPath.row]
+        print(collectionItems[indexPath.item])
+        cell.bind(model:collectionItems[indexPath.item])
         cell.profileImageView.image = UIImage(named: ImageItems[indexPath.row])
         
         cell.profileStatusBtn.layer.cornerRadius = 9
@@ -144,4 +142,40 @@ extension SelectedGroupViewController:UICollectionViewDelegateFlowLayout {
                 
     }
     
+}
+
+
+
+extension SelectedGroupViewController{
+    func networking(){
+        SelectedGroupService.groupShared.GroupSelect(idx:groupIdx!) { networkResult in
+            switch networkResult {
+            case .success(let token):
+                guard let data = token as? DataInfo else {
+                    return
+                }
+                
+                self.collectionItems = data.groupUser!
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+                
+                self.groupNameLabel.text = data.groupInfo?.name
+                
+                
+            case .requestErr(let message):
+                guard let message = message as? String else { return }
+                let alertViewController = UIAlertController(title: "그룹 정보 가져오기 실패", message: message, preferredStyle: .alert)
+            case .pathErr:
+                print("path")
+            case .serverErr:
+                 print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+                
+            
+        }
+        
+    }
 }

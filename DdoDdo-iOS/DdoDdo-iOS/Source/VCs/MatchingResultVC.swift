@@ -28,7 +28,11 @@ class MatchingResultVC: UIViewController {
         }
         self.infoBgView.layer.cornerRadius = 30
         self.infoBgView.clipsToBounds = true
-        self.infoBgView.layer.maskedCorners = [.layerMaxXMinYCorner]
+        // .layerMaxXMinYCorner : 오른쪽 위
+        // .layerMaxXMaxYCorner : 오른쪽 아래
+        // .layerMinXMaxYCorner : 왼쪽 아래
+        // .layerMinXMinYCorner : 왼쪽 위
+        self.infoBgView.layer.maskedCorners = [.layerMaxXMinYCorner,.layerMaxXMaxYCorner ,.layerMinXMaxYCorner, .layerMinXMinYCorner]
 
         self.infoBgView.dropShadow(color: UIColor(red: 0, green: 0, blue: 0, alpha: 1),
                                    offSet: CGSize(width: 0, height: -3), opacity: 0.11, radius: 10)

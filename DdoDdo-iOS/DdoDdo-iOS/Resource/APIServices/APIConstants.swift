@@ -16,4 +16,8 @@ struct APIConstants {
     static let homeURL = baseURL + "home"
     static let homeTokenURL = baseURL + "token"
     static let SelectedGroupURL = "http://52.78.27.117:3000/group/"
+    
+    
+    /// 나라나라 충돌나라~
+
 }
