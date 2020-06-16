@@ -18,5 +18,6 @@ struct APIConstants {
     static let SelectedGroupURL = "http://52.78.27.117:3000/group/"
     
     
-    // 충돌충돌충돌~~~
+    /// 나라나라 충돌나라~
+
 }
