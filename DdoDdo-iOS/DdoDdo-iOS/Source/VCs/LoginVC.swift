@@ -25,6 +25,9 @@ class LoginVC: UIViewController {
     
     // MARK:- LifeCycle Method
     override func viewDidLoad() {
+        UIView.animate(withDuration: 1, animations: {
+            
+        })
         super.viewDidLoad()
         self.constraintY = self.stackViewConstraintY.constant
         setLayout()
