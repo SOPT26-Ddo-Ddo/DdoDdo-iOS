@@ -20,6 +20,8 @@ class LoginVC: UIViewController {
     @IBOutlet var pwTextField: UITextField!
     @IBOutlet var stackViewConstraintY: NSLayoutConstraint!
     
+    @IBOutlet var idBackgroundView: UIView!
+    @IBOutlet var pwBackgroundView: UIView!
     
     // MARK:- LifeCycle Method
     override func viewDidLoad() {
@@ -48,6 +50,16 @@ class LoginVC: UIViewController {
                                     offSet: CGSize(width: 0, height: 3),
                                     opacity: 0.16,
                                     radius: 6)
+        self.idBackgroundView.layer.borderWidth = 0.5
+        self.idBackgroundView.layer.borderColor = CGColor(srgbRed: 112 / 255, green: 112 / 255, blue: 112 / 255, alpha: 1.0)
+        self.idBackgroundView.layer.cornerRadius = 26
+        self.idBackgroundView.layer.masksToBounds = true
+        
+        self.pwBackgroundView.layer.borderWidth = 0.5
+        self.pwBackgroundView.layer.borderColor = CGColor(srgbRed: 112 / 255, green: 112 / 255, blue: 112 / 255, alpha: 1.0)
+        self.pwBackgroundView.layer.cornerRadius = 26
+        self.pwBackgroundView.layer.masksToBounds = true
+        
     }
     
 
@@ -127,6 +139,7 @@ class LoginVC: UIViewController {
     @IBAction func touchUpLoginButton(_ sender: UIButton) {
         
         guard idTextField.hasText && pwTextField.hasText else {
+            self.simpleAlert(title: "잘못된 입력", message: "아이디나 비밀번호를 입력해주세요")
             return
         }
         

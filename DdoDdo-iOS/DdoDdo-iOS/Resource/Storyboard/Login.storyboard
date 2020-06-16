@@ -27,7 +27,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X2m-08-Oks">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="52"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginPswBtn" translatesAutoresizingMaskIntoConstraints="NO" id="8mE-K8-r0Q">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8mE-K8-r0Q">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="52"/>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="아이디" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="efQ-L1-pfr">
@@ -53,7 +53,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8pM-vq-j5j">
                                         <rect key="frame" x="0.0" y="67" width="343" height="52"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginPswBtn" translatesAutoresizingMaskIntoConstraints="NO" id="x5x-sg-iwO">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x5x-sg-iwO">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="52"/>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="60x-ox-ali">
@@ -125,9 +125,11 @@
                         <viewLayoutGuide key="safeArea" id="s4D-EC-EK5"/>
                     </view>
                     <connections>
+                        <outlet property="idBackgroundView" destination="X2m-08-Oks" id="65h-o5-Y9f"/>
                         <outlet property="idTextField" destination="efQ-L1-pfr" id="Rw1-oW-0p4"/>
                         <outlet property="loginButton" destination="eSR-uS-sTA" id="MIX-Jr-brv"/>
                         <outlet property="logoImageView" destination="cok-UM-lg6" id="hWB-Gc-e1R"/>
+                        <outlet property="pwBackgroundView" destination="8pM-vq-j5j" id="iBi-TP-Ikd"/>
                         <outlet property="pwTextField" destination="60x-ox-ali" id="eIY-04-U6A"/>
                         <outlet property="stackViewConstraintY" destination="bxU-JY-7q5" id="DE7-Tn-i0N"/>
                     </connections>
@@ -139,6 +141,5 @@
     </scenes>
     <resources>
         <image name="character_logo-2" width="2953" height="2953"/>
-        <image name="loginPswBtn" width="343" height="52"/>
     </resources>
 </document>
