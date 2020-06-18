@@ -48,7 +48,7 @@ class SelectedGroupViewController: UIViewController {
     
     
     func setImgItems(){
-        ImageItems = ["profile-example1","profile-example2","profile-example3","profile-example4","profile-example5","profile-example6","profile-example7","profile-example8"]
+        ImageItems = ["profile-example4","profile-example7","sangil-profile","profile-example1","profile-example5","profile-example6","profile-example7","profile-example8"]
     }
     
                
@@ -68,17 +68,24 @@ class SelectedGroupViewController: UIViewController {
 
         let matchingStoryboard = UIStoryboard.init(name: "MatchingResult", bundle: nil)
         
-        if let dvc = matchingStoryboard.instantiateViewController(identifier: "MatchingResult") as? MatchingResultVC {
+        if let dvc1 = matchingStoryboard.instantiateViewController(identifier: "MatchingResult") as? MatchingResultVC {
+            dvc1.groupIdx = self.groupIdx
+            dvc1.setLayout()
             
-            dvc.modalPresentationStyle = .fullScreen
-            self.present(dvc , animated: true, completion: {
+            dvc1.modalPresentationStyle = .fullScreen
+            self.present(dvc1 , animated: true, completion: {
                 let sb = UIStoryboard.init(name: "ResultAfterOK", bundle: nil)
                 
-                if let dvc = sb.instantiateViewController(identifier: "ResultAfterOK") as? ResultAfterOKVC {
+                if let dvc2 = sb.instantiateViewController(identifier: "ResultAfterOK") as? ResultAfterOKVC {
+                    dvc2.name = dvc1.myManitoInfo?.name
+                    dvc2.msg = dvc1.myManitoInfo?.profileMsg
+            
                     print(#function)
-                    self.navigationController?.pushViewController(dvc, animated: true)
+                    self.navigationController?.pushViewController(dvc2, animated: true)
+                    
                 }
             })
+            
 
         }
         
@@ -114,7 +121,8 @@ extension SelectedGroupViewController:UICollectionViewDataSource {
         print(collectionItems[indexPath.item])
         cell.bind(model:collectionItems[indexPath.item])
         cell.profileImageView.image = UIImage(named: ImageItems[indexPath.row])
-        
+        cell.profileImageView.layer.cornerRadius = cell.profileImageView.bounds.width / 2
+        cell.profileImageView.contentMode = .scaleAspectFill
         cell.profileStatusBtn.layer.cornerRadius = 9
       
         cell.profileStatusBtn.isHidden = true

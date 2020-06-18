@@ -339,6 +339,7 @@
                     <connections>
                         <outlet property="backToHomeButton" destination="H9M-eL-cBC" id="n7t-2b-P6F"/>
                         <outlet property="groupInfoBg" destination="PtQ-2h-Mmd" id="aVf-PO-Qlx"/>
+                        <outlet property="manitoLabel" destination="zAb-Hg-Bjg" id="xdc-DR-AEd"/>
                         <outlet property="memberCollectionView" destination="syI-yq-UWr" id="Jaq-yO-MVF"/>
                         <outlet property="missionTableView" destination="thw-4l-QOg" id="Lei-Nd-Tca"/>
                         <outlet property="naviBg" destination="cQu-Z7-lsl" id="eXv-MN-WzZ"/>
