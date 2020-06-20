@@ -9,17 +9,22 @@
 import UIKit
 
 class MatchingResultVC: UIViewController {
-
     @IBOutlet var favoriteCollectionView: UICollectionView!
     @IBOutlet var okButton: UIButton!
-    
     @IBOutlet var infoBgView: UIView!
     @IBOutlet var keywordArray: [UILabel]!
+    @IBOutlet weak var bigProfile: UIImageView!
+    @IBOutlet weak var manitoNameLabel: UILabel!
+    @IBOutlet weak var manitoMsgLabel: UILabel!
+    var myManitoInfo : MyManito?
     var favoriteList = ["#고기", "#돈스파이크", "#지민", "#기획"]
     var imageList = ["favorite-image-example1", "favorite-image-example2", "favorite-image-example3", "favorite-image-example4"]
+    var bigProfileImg: String?
+    var groupIdx:Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setLayout()
         self.okButton.layer.cornerRadius = 24
         self.okButton.layer.masksToBounds = true
         
@@ -39,6 +44,44 @@ class MatchingResultVC: UIViewController {
         
         self.favoriteCollectionView.dataSource = self
         self.favoriteCollectionView.delegate = self
+        
+    }
+    
+    func setLayout(){
+        MatchingResultService.shared.loadMyManito(groupIdx!){ networkResult in
+                switch networkResult{
+                case .success(let manitoData):
+                    print(manitoData)
+                    guard let manitodata = manitoData as? MatchingResult else{return}
+                    self.myManitoInfo = manitodata.myManito
+                    switch self.myManitoInfo!.userIdx{
+                    case 48:
+                        self.bigProfileImg = "profile-example4"
+                    case 49:
+                        self.bigProfileImg = "profile-example7"
+                    case 51:
+                        self.bigProfileImg = "sangil-profile"
+                    default:
+                        break
+                        
+                    }
+                    
+                    DispatchQueue.main.async {
+                        self.bigProfile.image = UIImage(named:self.bigProfileImg ?? "")
+                        self.manitoNameLabel.text = self.myManitoInfo?.name
+                        self.manitoMsgLabel.text = self.myManitoInfo?.profileMsg
+                    }
+                case .requestErr(let message):
+                    guard let message = message as? String else {return}
+                    print(message)
+                case .serverErr: print("serverErr")
+                case .pathErr:
+                    print("pathErr")
+                case .networkFail:
+                    print("networkFail")
+                }
+                    
+        }
     }
     
     @IBAction func touchUpOKButton(_ sender: UIButton) {

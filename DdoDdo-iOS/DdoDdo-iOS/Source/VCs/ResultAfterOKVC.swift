@@ -10,6 +10,7 @@ import UIKit
 
 class ResultAfterOKVC: UIViewController {
     
+    @IBOutlet weak var manitoLabel: UILabel!
     @IBOutlet var memberCollectionView: UICollectionView!
     @IBOutlet var missionTableView: UITableView!
     
@@ -19,10 +20,14 @@ class ResultAfterOKVC: UIViewController {
     
     @IBOutlet var backToHomeButton: UIButton!
     @IBOutlet var naviBg: UIView!
+    var name :String?
+    var msg :String?
+    
     var tagList = ["흥부자", "케이팝", "상큼한"]
     var imageList = ["profile-example1", "profile-example2", "profile-example3", "profile-example4", "profile-example5", "profile-example6", "profile-example7", "profile-example8"]
     var missionList = ["마음을 담은 손편지를 집으로 보내주세요.", "닮은 연예인을 찾아서 말해주세요."]
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         self.groupInfoBg.backgroundColor = UIColor.paleGold
         self.view.backgroundColor = UIColor.paleGold
@@ -36,7 +41,7 @@ class ResultAfterOKVC: UIViewController {
             $0.layer.cornerRadius = 10
             $0.layer.masksToBounds = true
         }
-        
+        self.manitoLabel.text = self.name
         
         self.backToHomeButton.backgroundColor = UIColor.paleGold
         self.backToHomeButton.layer.cornerRadius = 24

@@ -44,6 +44,8 @@
 		B89C2F45248C166900034EDB /* HomeGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C2F44248C166900034EDB /* HomeGroupCell.swift */; };
 		B89C2F47248C257C00034EDB /* HomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C2F46248C257C00034EDB /* HomeData.swift */; };
 		B89C2F49248C4C7C00034EDB /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C2F48248C4C7C00034EDB /* HomeService.swift */; };
+		B8AB6462249B490700086345 /* MatchingResultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AB6461249B490700086345 /* MatchingResultService.swift */; };
+		B8AB6464249B493F00086345 /* MatchingResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AB6463249B493F00086345 /* MatchingResultData.swift */; };
 		E2BD402A3F6534A955EDE249 /* Pods_DdoDdo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C3E5F54BDC793232095A59C /* Pods_DdoDdo_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +91,8 @@
 		B89C2F44248C166900034EDB /* HomeGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGroupCell.swift; sourceTree = "<group>"; };
 		B89C2F46248C257C00034EDB /* HomeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeData.swift; sourceTree = "<group>"; };
 		B89C2F48248C4C7C00034EDB /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		B8AB6461249B490700086345 /* MatchingResultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingResultService.swift; sourceTree = "<group>"; };
+		B8AB6463249B493F00086345 /* MatchingResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingResultData.swift; sourceTree = "<group>"; };
 		D6FE401ADCA6305666D63870 /* Pods-DdoDdo-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DdoDdo-iOS.release.xcconfig"; path = "Target Support Files/Pods-DdoDdo-iOS/Pods-DdoDdo-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -206,6 +210,7 @@
 				33762E4C248C2CE200B27FA8 /* ManitoResultData.swift */,
 				7FD2E33B2497771E008DA473 /* LoginData.swift */,
 				7FD2E33F2498D43A008DA473 /* GenericResponse.swift */,
+				B8AB6463249B493F00086345 /* MatchingResultData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -244,6 +249,7 @@
 				B89C2F48248C4C7C00034EDB /* HomeService.swift */,
 				33762E50248C469800B27FA8 /* SelectedGroupService.swift */,
 				7FD2E33924976F92008DA473 /* AuthService.swift */,
+				B8AB6461249B490700086345 /* MatchingResultService.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -385,10 +391,12 @@
 				7FB929D8248C378200798CC2 /* MatchingResultVC.swift in Sources */,
 				7FB929A7248BD4CD00798CC2 /* AppDelegate.swift in Sources */,
 				33762E4D248C2CE200B27FA8 /* ManitoResultData.swift in Sources */,
+				B8AB6462249B490700086345 /* MatchingResultService.swift in Sources */,
 				33762E4B248C26A600B27FA8 /* SelectedGroupData.swift in Sources */,
 				33762E4F248C45BC00B27FA8 /* ManitoCheckVC.swift in Sources */,
 				7FB929A9248BD4CD00798CC2 /* SceneDelegate.swift in Sources */,
 				7FB929DC248C429400798CC2 /* UIView+Extensions.swift in Sources */,
+				B8AB6464249B493F00086345 /* MatchingResultData.swift in Sources */,
 				7FB929C3248BD71500798CC2 /* UIColor+Extensions.swift in Sources */,
 				7FD2E33C2497771E008DA473 /* LoginData.swift in Sources */,
 				7FD2E3402498D43A008DA473 /* GenericResponse.swift in Sources */,
@@ -542,13 +550,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HAWSBW2KW5;
+				DEVELOPMENT_TEAM = 4YXV56BSN6;
 				INFOPLIST_FILE = "DdoDdo-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.github.juhyeoklee.DdoDdo-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "io2.github.juhyeoklee.DdoDdo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -561,13 +569,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HAWSBW2KW5;
+				DEVELOPMENT_TEAM = 4YXV56BSN6;
 				INFOPLIST_FILE = "DdoDdo-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.github.juhyeoklee.DdoDdo-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "io2.github.juhyeoklee.DdoDdo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

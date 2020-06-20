@@ -17,7 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="big-profile-example" translatesAutoresizingMaskIntoConstraints="NO" id="vKD-Td-KBN">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="386"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="386" id="de3-Q7-igi"/>
+                                </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Agg-PA-Gvw">
                                 <rect key="frame" x="0.0" y="352" width="375" height="426"/>
@@ -176,7 +179,6 @@
                             <constraint firstItem="H1o-4r-qej" firstAttribute="trailing" secondItem="89b-yz-6TX" secondAttribute="trailing" constant="16" id="1eD-Sh-sht"/>
                             <constraint firstItem="Agg-PA-Gvw" firstAttribute="top" secondItem="89b-yz-6TX" secondAttribute="bottom" constant="17" id="1iH-lR-IOx"/>
                             <constraint firstItem="vKD-Td-KBN" firstAttribute="leading" secondItem="H1o-4r-qej" secondAttribute="leading" id="86Z-Mn-Cjg"/>
-                            <constraint firstItem="H1o-4r-qej" firstAttribute="bottom" secondItem="vKD-Td-KBN" secondAttribute="bottom" id="8GN-Oc-rvb"/>
                             <constraint firstItem="Agg-PA-Gvw" firstAttribute="leading" secondItem="H1o-4r-qej" secondAttribute="leading" id="L1W-g8-BdN"/>
                             <constraint firstItem="89b-yz-6TX" firstAttribute="leading" secondItem="H1o-4r-qej" secondAttribute="leading" constant="16" id="Ncd-fh-xf1"/>
                             <constraint firstItem="vKD-Td-KBN" firstAttribute="top" secondItem="PDk-I0-qy7" secondAttribute="top" id="NrS-wQ-GCN"/>
@@ -189,8 +191,11 @@
                         <viewLayoutGuide key="safeArea" id="H1o-4r-qej"/>
                     </view>
                     <connections>
+                        <outlet property="bigProfile" destination="vKD-Td-KBN" id="iOG-W5-9fp"/>
                         <outlet property="favoriteCollectionView" destination="nxq-Kq-Du8" id="2Ie-uX-gCf"/>
                         <outlet property="infoBgView" destination="Agg-PA-Gvw" id="h38-qJ-qTP"/>
+                        <outlet property="manitoMsgLabel" destination="S19-Ll-vwk" id="hGH-l7-47A"/>
+                        <outlet property="manitoNameLabel" destination="6nx-Pm-Ykc" id="my0-Bw-91K"/>
                         <outlet property="okButton" destination="E1W-IZ-icZ" id="PgV-Q4-7jY"/>
                         <outletCollection property="keywordArray" destination="DzO-jU-loF" collectionClass="NSMutableArray" id="PF1-Bd-twB"/>
                         <outletCollection property="keywordArray" destination="xTk-sv-FIc" collectionClass="NSMutableArray" id="Cpf-AS-uL5"/>

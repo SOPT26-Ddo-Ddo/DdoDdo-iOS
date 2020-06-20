@@ -19,7 +19,7 @@ struct SelectedGroupService {
       
 
         let header: HTTPHeaders = ["Content-Type":"application/json"]
-        let dataRequest = Alamofire.request(APIConstants.SelectedGroupURL + "\(idx)" ,method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header)
+        let dataRequest = Alamofire.request(APIConstants.SelectedGroupURL + "/\(idx)" ,method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header)
            
         
         dataRequest.responseData { dataResponse in
