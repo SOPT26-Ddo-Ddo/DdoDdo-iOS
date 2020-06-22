@@ -51,11 +51,16 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zG-WH-iBp">
-                                <rect key="frame" x="16" y="80" width="178" height="24"/>
+                                <rect key="frame" x="16.000000000000004" y="80" width="50.333333333333343" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="hhp-oV-SSJ"/>
-                                    <constraint firstAttribute="width" constant="178" id="muc-xj-Hm7"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="님 안녕하세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQg-P1-h1d">
+                                <rect key="frame" x="84" y="82" width="114" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -132,12 +137,14 @@
                             <constraint firstItem="Okl-RM-acc" firstAttribute="trailing" secondItem="Uwz-tH-h5p" secondAttribute="trailing" id="JEZ-OF-aIZ"/>
                             <constraint firstItem="KeG-2g-xQi" firstAttribute="top" secondItem="rqx-AQ-Rou" secondAttribute="top" constant="225" id="MEf-iR-3Z6"/>
                             <constraint firstItem="2zG-WH-iBp" firstAttribute="leading" secondItem="rqx-AQ-Rou" secondAttribute="leading" constant="16" id="N98-v9-sO7"/>
+                            <constraint firstItem="RQg-P1-h1d" firstAttribute="leading" secondItem="2zG-WH-iBp" secondAttribute="trailing" id="Nlw-Nu-w0S"/>
                             <constraint firstItem="WLL-Ln-DQB" firstAttribute="top" secondItem="vfb-8S-4Fn" secondAttribute="bottom" constant="20" id="Q8V-Wb-jDN"/>
                             <constraint firstAttribute="bottom" secondItem="WLL-Ln-DQB" secondAttribute="bottom" constant="82" id="STI-6g-KSf"/>
                             <constraint firstItem="DNQ-aW-O7N" firstAttribute="leading" secondItem="rqx-AQ-Rou" secondAttribute="leading" constant="122" id="WuL-uu-pxS"/>
                             <constraint firstItem="WLL-Ln-DQB" firstAttribute="trailing" secondItem="Okl-RM-acc" secondAttribute="trailing" id="Z2F-36-hWk"/>
                             <constraint firstItem="WLL-Ln-DQB" firstAttribute="leading" secondItem="Okl-RM-acc" secondAttribute="leading" id="ZwN-1C-xCf"/>
                             <constraint firstItem="Uwz-tH-h5p" firstAttribute="top" secondItem="WLL-Ln-DQB" secondAttribute="bottom" id="bOc-M7-IX7"/>
+                            <constraint firstItem="RQg-P1-h1d" firstAttribute="top" secondItem="2zG-WH-iBp" secondAttribute="top" id="cJe-Al-WZF"/>
                             <constraint firstItem="Ifo-Jx-Xm8" firstAttribute="top" secondItem="Okl-RM-acc" secondAttribute="top" constant="17" id="jxX-Sq-4zt"/>
                             <constraint firstItem="Okl-RM-acc" firstAttribute="trailing" secondItem="Ifo-Jx-Xm8" secondAttribute="trailing" constant="16" id="mxA-dJ-0Yo"/>
                             <constraint firstAttribute="trailing" secondItem="DNQ-aW-O7N" secondAttribute="trailing" constant="122" id="p7E-c0-XoM"/>

@@ -21,12 +21,13 @@ class ResultAfterOKVC: UIViewController {
     @IBOutlet var backToHomeButton: UIButton!
     @IBOutlet var naviBg: UIView!
     @IBOutlet weak var MyManitoProfileImg: UIImageView!
+    @IBOutlet weak var manitoMsg: UILabel!
     var name :String?
     var msg :String?
     var manitoIdx:Int?
     var tagList = ["흥부자", "케이팝", "상큼한"]
     var imageList = ["profile-example1", "profile-example2", "profile-example3", "profile-example4", "profile-example5", "profile-example6", "profile-example7", "profile-example8"]
-    var missionList = ["마음을 담은 손편지를 집으로 보내주세요.", "닮은 연예인을 찾아서 말해주세요."]
+    var missionList = ["마음을 담은 손편지를 집으로 보내주세요.", "닮은 연예인을 찾아서 말해주세요.","먼저 연락을 해보세요.","몰래 칭찬해주세요."]
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -43,13 +44,17 @@ class ResultAfterOKVC: UIViewController {
             $0.layer.masksToBounds = true
         }
         self.manitoLabel.text = self.name
+        self.setMyManito(userIdx: self.manitoIdx)
+        self.manitoMsg.text = self.msg
         
         self.backToHomeButton.backgroundColor = UIColor.paleGold
         self.backToHomeButton.layer.cornerRadius = 24
-        self.backToHomeButton.layer.masksToBounds = true
+        //self.backToHomeButton.layer.masksToBounds = true
+        self.backToHomeButton.dropShadow(color: .black, offSet: CGSize(width: 0, height: 3), opacity: 0.16, radius: 6)
+        
     }
     @IBAction func dismissButton(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        self.navigationController?.popToRootViewController(animated: true)
     }
     @IBAction func backToHomeButton(_ sender: Any) {
         self.navigationController?.popToRootViewController(animated: true)
@@ -57,19 +62,20 @@ class ResultAfterOKVC: UIViewController {
     func changeImage(_ imageName :String){
         self.MyManitoProfileImg.image = UIImage(named:imageName)
         self.MyManitoProfileImg.layer.cornerRadius = self.MyManitoProfileImg.bounds.width / 2
+        self.MyManitoProfileImg.contentMode = .scaleAspectFill
     }
-    func setMyManito(userIdx manitoIdx :Int){
+    func setMyManito(userIdx manitoIdx :Int?){
         switch manitoIdx{
         case 48:
-            self.MyManitoProfileImg.image = 
+            changeImage("profile-example4")
         case 49:
-            self.bigProfileImg = "profile-example7"
+            changeImage("profile-example7")
         case 51:
-            self.bigProfileImg = "sangil-profile"
+            changeImage("sangil-profile")
         default:
             break
         }
-        self.MyManitoProfileImg.image = 
+        //self.MyManitoProfileImg.image = 
     }
     
 }
@@ -107,6 +113,7 @@ extension ResultAfterOKVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: ResultAfterOKMissionCell.identifier) as? ResultAfterOKMissionCell {
+            cell.missionLabel.text = missionList[indexPath.row]
             return cell
         }
         else {

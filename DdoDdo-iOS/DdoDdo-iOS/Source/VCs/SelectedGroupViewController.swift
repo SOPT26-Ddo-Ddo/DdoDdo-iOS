@@ -38,6 +38,7 @@ class SelectedGroupViewController: UIViewController {
         self.view.backgroundColor = UIColor.paleGold
         collectionView.backgroundColor = UIColor.paleGold
         matchingBtn.backgroundColor = UIColor.paleGold
+        matchingBtn.dropShadow(color: .black, offSet: CGSize(width: 0, height: 3), opacity: 0.16, radius: 6)
         setImgItems()
         networking()
         
@@ -79,7 +80,7 @@ class SelectedGroupViewController: UIViewController {
                 if let dvc2 = sb.instantiateViewController(identifier: "ResultAfterOK") as? ResultAfterOKVC {
                     dvc2.name = dvc1.myManitoInfo?.name
                     dvc2.msg = dvc1.myManitoInfo?.profileMsg
-            
+                    dvc2.manitoIdx = dvc1.myManitoInfo?.userIdx
                     print(#function)
                     self.navigationController?.pushViewController(dvc2, animated: true)
                     

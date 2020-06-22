@@ -16,6 +16,9 @@ class MatchingResultVC: UIViewController {
     @IBOutlet weak var bigProfile: UIImageView!
     @IBOutlet weak var manitoNameLabel: UILabel!
     @IBOutlet weak var manitoMsgLabel: UILabel!
+    @IBAction func backButton(_ sender: Any) {
+        
+    }
     var myManitoInfo : MyManito?
     var favoriteList = ["#고기", "#돈스파이크", "#지민", "#기획"]
     var imageList = ["favorite-image-example1", "favorite-image-example2", "favorite-image-example3", "favorite-image-example4"]

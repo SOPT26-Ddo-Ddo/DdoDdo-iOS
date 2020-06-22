@@ -27,6 +27,7 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         self.view.backgroundColor = UIColor.paleGold
+        self.addGroup.dropShadow(color: .black, offSet: CGSize(width: 0, height: 3), opacity: 0.16, radius: 6)
         super.viewDidLoad()
         HomeService.shared.loadHome(){ networkResult in
             switch networkResult{
@@ -63,7 +64,7 @@ class HomeVC: UIViewController {
     }
     
     private func setProfileLabel(){
-        homeProfileHiLabel.text = "\(homeUserData?.name ?? "")님 안녕하세요!"
+        homeProfileHiLabel.text = homeUserData?.name ?? ""
         homeProfileTextView.text = homeUserData?.profileMsg ?? ""
     }
     private func setProfileImg(_ userIdx: Int){
