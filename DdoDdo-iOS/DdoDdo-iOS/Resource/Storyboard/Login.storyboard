@@ -138,6 +138,21 @@
             </objects>
             <point key="canvasLocation" x="138.40000000000001" y="137.4384236453202"/>
         </scene>
+        <!--SigninVC-->
+        <scene sceneID="GWr-Ap-mV9">
+            <objects>
+                <viewController id="FWv-FU-Awh" customClass="SigninVC" customModule="DdoDdo_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HQe-h0-Czx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Pge-9c-rPR"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o8m-zA-bM0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="929" y="138"/>
+        </scene>
     </scenes>
     <resources>
         <image name="character_logo-2" width="2953" height="2953"/>

@@ -46,6 +46,7 @@
 		B89C2F49248C4C7C00034EDB /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C2F48248C4C7C00034EDB /* HomeService.swift */; };
 		B8AB6462249B490700086345 /* MatchingResultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AB6461249B490700086345 /* MatchingResultService.swift */; };
 		B8AB6464249B493F00086345 /* MatchingResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AB6463249B493F00086345 /* MatchingResultData.swift */; };
+		B8AB646D24A0CD1600086345 /* SigninVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AB646C24A0CD1600086345 /* SigninVC.swift */; };
 		E2BD402A3F6534A955EDE249 /* Pods_DdoDdo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C3E5F54BDC793232095A59C /* Pods_DdoDdo_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		B89C2F48248C4C7C00034EDB /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		B8AB6461249B490700086345 /* MatchingResultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingResultService.swift; sourceTree = "<group>"; };
 		B8AB6463249B493F00086345 /* MatchingResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingResultData.swift; sourceTree = "<group>"; };
+		B8AB646C24A0CD1600086345 /* SigninVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninVC.swift; sourceTree = "<group>"; };
 		D6FE401ADCA6305666D63870 /* Pods-DdoDdo-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DdoDdo-iOS.release.xcconfig"; path = "Target Support Files/Pods-DdoDdo-iOS/Pods-DdoDdo-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -186,6 +188,7 @@
 				7FB929D7248C378200798CC2 /* MatchingResultVC.swift */,
 				33762E4E248C45BC00B27FA8 /* ManitoCheckVC.swift */,
 				7FD2E33724969874008DA473 /* LoginVC.swift */,
+				B8AB646C24A0CD1600086345 /* SigninVC.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				B89C2F45248C166900034EDB /* HomeGroupCell.swift in Sources */,
 				7FB929CA248BD90400798CC2 /* NetworkResult.swift in Sources */,
 				B89C2F47248C257C00034EDB /* HomeData.swift in Sources */,
+				B8AB646D24A0CD1600086345 /* SigninVC.swift in Sources */,
 				33762E45248C139400B27FA8 /* SelectedGroupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
