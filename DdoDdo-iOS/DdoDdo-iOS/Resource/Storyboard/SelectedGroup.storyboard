@@ -167,11 +167,14 @@
                                 <rect key="frame" x="26" y="552" width="320" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXi-Aa-MTd">
-                                <rect key="frame" x="16" y="70.000000000000114" width="12.333333333333336" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXi-Aa-MTd">
+                                <rect key="frame" x="17" y="69" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="COK-Mg-j0Q"/>
+                                    <constraint firstAttribute="width" constant="30" id="Ux5-PI-UJf"/>
+                                </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" backgroundImage="chevron.left" catalog="system"/>
+                                <state key="normal" image="chevron.left" catalog="system"/>
                                 <connections>
                                     <action selector="backBtn:" destination="Djm-HK-WWM" eventType="touchUpInside" id="LtA-nz-AWc"/>
                                 </connections>
@@ -184,8 +187,10 @@
                             <constraint firstAttribute="bottom" secondItem="rqv-DS-DXB" secondAttribute="bottom" constant="170" id="6bn-Y7-S6B"/>
                             <constraint firstItem="9dB-yw-ykF" firstAttribute="top" secondItem="rqv-DS-DXB" secondAttribute="bottom" constant="12" id="7dl-XH-shr"/>
                             <constraint firstItem="9dB-yw-ykF" firstAttribute="baseline" secondItem="gEL-AN-v30" secondAttribute="baseline" id="7r2-9L-DA8"/>
-                            <constraint firstItem="Gm4-n5-iz5" firstAttribute="top" secondItem="yHn-Ho-8Zk" secondAttribute="top" constant="20" id="9be-Io-xtC"/>
+                            <constraint firstAttribute="top" secondItem="yHn-Ho-8Zk" secondAttribute="top" constant="20" id="9be-Io-xtC"/>
+                            <constraint firstItem="hXi-Aa-MTd" firstAttribute="leading" secondItem="yHn-Ho-8Zk" secondAttribute="leading" constant="17" id="FRg-ff-iG4"/>
                             <constraint firstItem="yHn-Ho-8Zk" firstAttribute="bottom" secondItem="s5m-0p-84R" secondAttribute="bottom" constant="37" id="Fr6-Ne-oJs"/>
+                            <constraint firstItem="hXi-Aa-MTd" firstAttribute="top" secondItem="yHn-Ho-8Zk" secondAttribute="top" constant="25" id="HEm-VF-pBN"/>
                             <constraint firstItem="9dB-yw-ykF" firstAttribute="leading" secondItem="yHn-Ho-8Zk" secondAttribute="leading" constant="108" id="Hoy-TG-Z2n"/>
                             <constraint firstItem="eqP-MR-1aN" firstAttribute="leading" secondItem="yHn-Ho-8Zk" secondAttribute="leading" constant="16" id="KD2-h9-fB7"/>
                             <constraint firstItem="s5m-0p-84R" firstAttribute="top" secondItem="9dB-yw-ykF" secondAttribute="bottom" constant="22" id="OA0-PB-THL"/>
@@ -203,7 +208,7 @@
                             <constraint firstItem="rqv-DS-DXB" firstAttribute="baseline" secondItem="3eq-sO-kmW" secondAttribute="baseline" id="mJo-XE-hrj"/>
                             <constraint firstItem="Dng-3P-HfA" firstAttribute="leading" secondItem="yHn-Ho-8Zk" secondAttribute="leading" constant="16" id="nk0-M5-pzB"/>
                             <constraint firstItem="rqv-DS-DXB" firstAttribute="leading" secondItem="yHn-Ho-8Zk" secondAttribute="leading" constant="110" id="pRA-OY-MVU"/>
-                            <constraint firstItem="Gm4-n5-iz5" firstAttribute="leading" secondItem="yHn-Ho-8Zk" secondAttribute="leading" constant="16" id="pkQ-FF-LBO"/>
+                            <constraint firstAttribute="leading" secondItem="yHn-Ho-8Zk" secondAttribute="leading" constant="16" id="pkQ-FF-LBO"/>
                             <constraint firstItem="fxO-SI-FMd" firstAttribute="leading" secondItem="rqv-DS-DXB" secondAttribute="trailing" constant="3" id="qtX-7Y-brS"/>
                             <constraint firstItem="yu1-nq-mPW" firstAttribute="leading" secondItem="3eq-sO-kmW" secondAttribute="trailing" constant="2" id="vNG-Rn-tpk"/>
                         </constraints>

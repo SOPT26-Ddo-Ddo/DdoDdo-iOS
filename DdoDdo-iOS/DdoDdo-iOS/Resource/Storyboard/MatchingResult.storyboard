@@ -31,7 +31,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="먹을 때 제일 행복합니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S19-Ll-vwk">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="먹을 때 제일 행복합니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S19-Ll-vwk">
                                         <rect key="frame" x="114" y="59" width="146" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
@@ -162,11 +162,6 @@
                                     <constraint firstItem="S19-Ll-vwk" firstAttribute="leading" secondItem="Agg-PA-Gvw" secondAttribute="leading" constant="114" id="xPB-SV-rqL"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1do-Jh-RKc">
-                                <rect key="frame" x="16" y="66" width="12.333333333333336" height="18"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" backgroundImage="chevron.left" catalog="system"/>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slider-example" translatesAutoresizingMaskIntoConstraints="NO" id="89b-yz-6TX">
                                 <rect key="frame" x="16" y="296" width="343" height="39"/>
                                 <constraints>
@@ -183,10 +178,8 @@
                             <constraint firstItem="89b-yz-6TX" firstAttribute="leading" secondItem="H1o-4r-qej" secondAttribute="leading" constant="16" id="Ncd-fh-xf1"/>
                             <constraint firstItem="vKD-Td-KBN" firstAttribute="top" secondItem="PDk-I0-qy7" secondAttribute="top" id="NrS-wQ-GCN"/>
                             <constraint firstItem="H1o-4r-qej" firstAttribute="trailing" secondItem="Agg-PA-Gvw" secondAttribute="trailing" id="RQS-16-YOg"/>
-                            <constraint firstItem="1do-Jh-RKc" firstAttribute="leading" secondItem="H1o-4r-qej" secondAttribute="leading" constant="16" id="Rx7-rK-pb8"/>
                             <constraint firstItem="H1o-4r-qej" firstAttribute="trailing" secondItem="vKD-Td-KBN" secondAttribute="trailing" id="hsH-5s-M9q"/>
                             <constraint firstItem="H1o-4r-qej" firstAttribute="bottom" secondItem="Agg-PA-Gvw" secondAttribute="bottom" id="itW-kY-XTn"/>
-                            <constraint firstItem="1do-Jh-RKc" firstAttribute="top" secondItem="PDk-I0-qy7" secondAttribute="top" constant="64" id="lTD-1L-uaF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="H1o-4r-qej"/>
                     </view>
@@ -209,7 +202,6 @@
     </scenes>
     <resources>
         <image name="big-profile-example" width="375" height="812"/>
-        <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="slider-example" width="357" height="51"/>
     </resources>
 </document>
