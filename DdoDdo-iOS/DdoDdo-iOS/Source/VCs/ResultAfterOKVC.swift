@@ -20,9 +20,10 @@ class ResultAfterOKVC: UIViewController {
     
     @IBOutlet var backToHomeButton: UIButton!
     @IBOutlet var naviBg: UIView!
+    @IBOutlet weak var MyManitoProfileImg: UIImageView!
     var name :String?
     var msg :String?
-    
+    var manitoIdx:Int?
     var tagList = ["흥부자", "케이팝", "상큼한"]
     var imageList = ["profile-example1", "profile-example2", "profile-example3", "profile-example4", "profile-example5", "profile-example6", "profile-example7", "profile-example8"]
     var missionList = ["마음을 담은 손편지를 집으로 보내주세요.", "닮은 연예인을 찾아서 말해주세요."]
@@ -52,6 +53,23 @@ class ResultAfterOKVC: UIViewController {
     }
     @IBAction func backToHomeButton(_ sender: Any) {
         self.navigationController?.popToRootViewController(animated: true)
+    }
+    func changeImage(_ imageName :String){
+        self.MyManitoProfileImg.image = UIImage(named:imageName)
+        self.MyManitoProfileImg.layer.cornerRadius = self.MyManitoProfileImg.bounds.width / 2
+    }
+    func setMyManito(userIdx manitoIdx :Int){
+        switch manitoIdx{
+        case 48:
+            self.MyManitoProfileImg.image = 
+        case 49:
+            self.bigProfileImg = "profile-example7"
+        case 51:
+            self.bigProfileImg = "sangil-profile"
+        default:
+            break
+        }
+        self.MyManitoProfileImg.image = 
     }
     
 }
