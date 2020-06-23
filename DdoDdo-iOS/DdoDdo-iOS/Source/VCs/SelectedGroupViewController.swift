@@ -16,8 +16,9 @@ class SelectedGroupViewController: UIViewController {
     var groupIdx:Int?
 
     @IBAction func backButton(_ sender: Any) { self.navigationController?.popViewController(animated: true)}
-
-    
+    //"2020-06-20T00:00:00.000Z"
+    let dateFormatter = DateFormatter()
+    var dateString :Date?
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var groupNameLabel: UILabel!
     @IBOutlet var collectionView: UICollectionView!
@@ -32,6 +33,7 @@ class SelectedGroupViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         matchingBtn.layer.cornerRadius = 24
@@ -41,9 +43,8 @@ class SelectedGroupViewController: UIViewController {
         matchingBtn.dropShadow(color: .black, offSet: CGSize(width: 0, height: 3), opacity: 0.16, radius: 6)
         setImgItems()
         networking()
-        
-   
-
+        //print("라라라라")
+        //print(Date())
     }
     
     
@@ -165,12 +166,18 @@ extension SelectedGroupViewController{
                 }
                 
                 self.collectionItems = data.groupUser!
+                print("ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ\(data)")
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
                 }
-                
+                self.dateString = data.groupInfo?.deadLine
+                let now = Date()
+                //print(self.dateString.compare(now))
                 self.groupNameLabel.text = data.groupInfo?.name
-                
+                //print("야야야야야야")
+                print()
+                //let deadlineDate = self.dateFormatter.date(from: self.dateString ?? "")
+               // print("날짜 : \(deadlineDate)")
                 
             case .requestErr(let message):
                 guard let message = message as? String else { return }
