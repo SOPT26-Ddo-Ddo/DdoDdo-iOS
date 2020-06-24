@@ -56,7 +56,7 @@ struct groupDetailInfo: Codable {
     var groupPwd:Int
     var name:String
     var numPeople:Int
-    var deadLine:String
+    var deadLine:Date
     var fix:Int
     var finish:Int
     var leader:Int
@@ -79,7 +79,7 @@ struct groupDetailInfo: Codable {
            groupPwd = (try? values.decode(Int.self, forKey: .groupPwd)) ?? -1
            name = (try? values.decode(String.self, forKey: .name)) ?? ""
            numPeople = (try? values.decode(Int.self, forKey: .numPeople)) ?? -1
-           deadLine = (try? values.decode(String.self, forKey: .deadLine)) ?? ""
+           deadLine = (try? values.decode(Date.self, forKey: .deadLine)) ?? Date()
            fix = (try? values.decode(Int.self, forKey: .fix)) ?? -1
         finish = (try? values.decode(Int.self, forKey: .finish)) ?? -1
         leader = (try? values.decode(Int.self, forKey: .leader)) ?? -1

@@ -32,7 +32,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="먹을 때 제일 행복합니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S19-Ll-vwk">
-                                        <rect key="frame" x="114" y="59" width="146" height="18"/>
+                                        <rect key="frame" x="114" y="59" width="147" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -159,6 +159,7 @@
                                     <constraint firstItem="6nx-Pm-Ykc" firstAttribute="leading" secondItem="Agg-PA-Gvw" secondAttribute="leading" constant="155" id="hCx-On-gsf"/>
                                     <constraint firstItem="rOP-gj-cAU" firstAttribute="top" secondItem="S19-Ll-vwk" secondAttribute="bottom" constant="11" id="li2-LW-j8A"/>
                                     <constraint firstItem="nxq-Kq-Du8" firstAttribute="top" secondItem="Icz-ht-tEM" secondAttribute="bottom" constant="25" id="nAT-Tg-GVq"/>
+                                    <constraint firstAttribute="trailing" secondItem="S19-Ll-vwk" secondAttribute="trailing" constant="114" id="u4k-7w-Xtk"/>
                                     <constraint firstItem="S19-Ll-vwk" firstAttribute="leading" secondItem="Agg-PA-Gvw" secondAttribute="leading" constant="114" id="xPB-SV-rqL"/>
                                 </constraints>
                             </view>

@@ -28,6 +28,7 @@ class ResultAfterOKVC: UIViewController {
     var tagList = ["흥부자", "케이팝", "상큼한"]
     var imageList = ["profile-example1", "profile-example2", "profile-example3", "profile-example4", "profile-example5", "profile-example6", "profile-example7", "profile-example8"]
     var missionList = ["마음을 담은 손편지를 집으로 보내주세요.", "닮은 연예인을 찾아서 말해주세요.","먼저 연락을 해보세요.","몰래 칭찬해주세요."]
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()

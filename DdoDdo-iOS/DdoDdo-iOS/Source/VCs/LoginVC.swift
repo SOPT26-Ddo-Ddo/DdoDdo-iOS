@@ -12,7 +12,8 @@ class LoginVC: UIViewController {
 
     
     var constraintY: CGFloat = 0
-    
+    var id : String?
+    var pw : String?
     // MARK:- IBOutlet
     @IBOutlet var loginButton: UIButton!
     @IBOutlet var logoImageView: UIImageView!
@@ -23,6 +24,12 @@ class LoginVC: UIViewController {
     @IBOutlet var idBackgroundView: UIView!
     @IBOutlet var pwBackgroundView: UIView!
     
+    @IBAction func signupBtn(_ sender: Any) {
+        guard let signupVC = self.storyboard?.instantiateViewController(identifier : "SignupVC") as? SignupVC else {return}
+        signupVC.modalPresentationStyle = .fullScreen
+        self.present(signupVC, animated: true)
+    }
+    
     // MARK:- LifeCycle Method
     override func viewDidLoad() {
         UIView.animate(withDuration: 1, animations: {
@@ -32,6 +39,8 @@ class LoginVC: UIViewController {
         self.constraintY = self.stackViewConstraintY.constant
         setLayout()
         initGestureRecognizer()
+        idTextField.text = id
+        pwTextField.text = pw
         // Do any additional setup after loading the view.
     }
     

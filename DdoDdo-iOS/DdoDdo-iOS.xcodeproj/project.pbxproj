@@ -40,13 +40,15 @@
 		7FD2E33C2497771E008DA473 /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2E33B2497771E008DA473 /* LoginData.swift */; };
 		7FD2E33E24977F90008DA473 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2E33D24977F90008DA473 /* UIViewController+Extensions.swift */; };
 		7FD2E3402498D43A008DA473 /* GenericResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2E33F2498D43A008DA473 /* GenericResponse.swift */; };
+		B831995C24A3538D00D8E03C /* SignupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B831995B24A3538D00D8E03C /* SignupService.swift */; };
+		B831995E24A3561000D8E03C /* SignupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B831995D24A3561000D8E03C /* SignupData.swift */; };
 		B89C2F35248C02F600034EDB /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C2F34248C02F600034EDB /* HomeVC.swift */; };
 		B89C2F45248C166900034EDB /* HomeGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C2F44248C166900034EDB /* HomeGroupCell.swift */; };
 		B89C2F47248C257C00034EDB /* HomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C2F46248C257C00034EDB /* HomeData.swift */; };
 		B89C2F49248C4C7C00034EDB /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C2F48248C4C7C00034EDB /* HomeService.swift */; };
 		B8AB6462249B490700086345 /* MatchingResultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AB6461249B490700086345 /* MatchingResultService.swift */; };
 		B8AB6464249B493F00086345 /* MatchingResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AB6463249B493F00086345 /* MatchingResultData.swift */; };
-		B8AB646D24A0CD1600086345 /* SigninVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AB646C24A0CD1600086345 /* SigninVC.swift */; };
+		B8AB646D24A0CD1600086345 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AB646C24A0CD1600086345 /* SignupVC.swift */; };
 		E2BD402A3F6534A955EDE249 /* Pods_DdoDdo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C3E5F54BDC793232095A59C /* Pods_DdoDdo_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,13 +90,15 @@
 		7FD2E33D24977F90008DA473 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		7FD2E33F2498D43A008DA473 /* GenericResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericResponse.swift; sourceTree = "<group>"; };
 		83C138059DF5F81E09D24E39 /* Pods-DdoDdo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DdoDdo-iOS.debug.xcconfig"; path = "Target Support Files/Pods-DdoDdo-iOS/Pods-DdoDdo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		B831995B24A3538D00D8E03C /* SignupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupService.swift; sourceTree = "<group>"; };
+		B831995D24A3561000D8E03C /* SignupData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupData.swift; sourceTree = "<group>"; };
 		B89C2F34248C02F600034EDB /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		B89C2F44248C166900034EDB /* HomeGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGroupCell.swift; sourceTree = "<group>"; };
 		B89C2F46248C257C00034EDB /* HomeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeData.swift; sourceTree = "<group>"; };
 		B89C2F48248C4C7C00034EDB /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		B8AB6461249B490700086345 /* MatchingResultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingResultService.swift; sourceTree = "<group>"; };
 		B8AB6463249B493F00086345 /* MatchingResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingResultData.swift; sourceTree = "<group>"; };
-		B8AB646C24A0CD1600086345 /* SigninVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninVC.swift; sourceTree = "<group>"; };
+		B8AB646C24A0CD1600086345 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		D6FE401ADCA6305666D63870 /* Pods-DdoDdo-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DdoDdo-iOS.release.xcconfig"; path = "Target Support Files/Pods-DdoDdo-iOS/Pods-DdoDdo-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,7 +192,7 @@
 				7FB929D7248C378200798CC2 /* MatchingResultVC.swift */,
 				33762E4E248C45BC00B27FA8 /* ManitoCheckVC.swift */,
 				7FD2E33724969874008DA473 /* LoginVC.swift */,
-				B8AB646C24A0CD1600086345 /* SigninVC.swift */,
+				B8AB646C24A0CD1600086345 /* SignupVC.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -214,6 +218,7 @@
 				7FD2E33B2497771E008DA473 /* LoginData.swift */,
 				7FD2E33F2498D43A008DA473 /* GenericResponse.swift */,
 				B8AB6463249B493F00086345 /* MatchingResultData.swift */,
+				B831995D24A3561000D8E03C /* SignupData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -253,6 +258,7 @@
 				33762E50248C469800B27FA8 /* SelectedGroupService.swift */,
 				7FD2E33924976F92008DA473 /* AuthService.swift */,
 				B8AB6461249B490700086345 /* MatchingResultService.swift */,
+				B831995B24A3538D00D8E03C /* SignupService.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -385,6 +391,7 @@
 				B89C2F35248C02F600034EDB /* HomeVC.swift in Sources */,
 				33762E51248C469800B27FA8 /* SelectedGroupService.swift in Sources */,
 				7FB929DE248C445F00798CC2 /* MatchingResultFavoriteCell.swift in Sources */,
+				B831995E24A3561000D8E03C /* SignupData.swift in Sources */,
 				7FD2E33A24976F92008DA473 /* AuthService.swift in Sources */,
 				33762E47248C13F800B27FA8 /* SelectedGroupProfileViewCell.swift in Sources */,
 				7FB929E0248C521900798CC2 /* ResultAfterOKMissionCell.swift in Sources */,
@@ -399,6 +406,7 @@
 				33762E4F248C45BC00B27FA8 /* ManitoCheckVC.swift in Sources */,
 				7FB929A9248BD4CD00798CC2 /* SceneDelegate.swift in Sources */,
 				7FB929DC248C429400798CC2 /* UIView+Extensions.swift in Sources */,
+				B831995C24A3538D00D8E03C /* SignupService.swift in Sources */,
 				B8AB6464249B493F00086345 /* MatchingResultData.swift in Sources */,
 				7FB929C3248BD71500798CC2 /* UIColor+Extensions.swift in Sources */,
 				7FD2E33C2497771E008DA473 /* LoginData.swift in Sources */,
@@ -407,7 +415,7 @@
 				B89C2F45248C166900034EDB /* HomeGroupCell.swift in Sources */,
 				7FB929CA248BD90400798CC2 /* NetworkResult.swift in Sources */,
 				B89C2F47248C257C00034EDB /* HomeData.swift in Sources */,
-				B8AB646D24A0CD1600086345 /* SigninVC.swift in Sources */,
+				B8AB646D24A0CD1600086345 /* SignupVC.swift in Sources */,
 				33762E45248C139400B27FA8 /* SelectedGroupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
