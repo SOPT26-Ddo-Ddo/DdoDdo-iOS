@@ -23,12 +23,17 @@ class HomeVC: UIViewController {
     @IBOutlet weak var groupTableView: UITableView!
     @IBAction func addGroupButton(_ sender: Any) {
     }
+    @IBAction func logout(_ sender: Any) {
+        self.dismiss(animated:true)
+        
+    }
     @IBOutlet weak var addGroup: UIButton!
     
     override func viewDidLoad() {
         self.view.backgroundColor = UIColor.paleGold
         self.addGroup.dropShadow(color: .black, offSet: CGSize(width: 0, height: 3), opacity: 0.16, radius: 6)
         super.viewDidLoad()
+        self.homeProfileImageView.layer.cornerRadius = self.homeProfileImageView.bounds.width/2
         HomeService.shared.loadHome(){ networkResult in
             switch networkResult{
             case .success(let homeData):
