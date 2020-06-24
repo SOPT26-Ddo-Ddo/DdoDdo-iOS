@@ -274,10 +274,12 @@
                     <connections>
                         <outlet property="gender" destination="3Tc-Oj-yD7" id="n8e-dj-Arg"/>
                         <outlet property="id" destination="8UK-Pc-ej5" id="mze-ZO-vwQ"/>
+                        <outlet property="logoImageView" destination="HDY-1H-KBD" id="BSi-Z4-XRP"/>
                         <outlet property="name" destination="WPa-2w-oY2" id="JFK-GQ-Cpm"/>
                         <outlet property="profileMsg" destination="3dh-Ln-FAM" id="KOC-kQ-czQ"/>
                         <outlet property="pwd" destination="11E-KB-s30" id="Nud-Dg-74C"/>
                         <outlet property="signupBtn" destination="qy2-Tw-CVb" id="2fb-nm-lbb"/>
+                        <outlet property="stackViewConstraintY" destination="Vh5-zf-p6X" id="62q-mh-RYg"/>
                         <outletCollection property="signupBody" destination="1Qb-bJ-R4f" collectionClass="NSMutableArray" id="Qa3-yo-Zjj"/>
                         <outletCollection property="signupBody" destination="OR4-ry-hxI" collectionClass="NSMutableArray" id="4hc-qV-UbE"/>
                         <outletCollection property="signupBody" destination="OhI-px-kas" collectionClass="NSMutableArray" id="e4y-U5-vUd"/>
