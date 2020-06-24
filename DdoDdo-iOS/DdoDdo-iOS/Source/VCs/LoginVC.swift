@@ -50,6 +50,8 @@ class LoginVC: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         unregisterForKeyboardNotifications()
+        self.idTextField.text = ""
+        self.pwTextField.text = ""
     }
     //MARK:- Custom Method
     
@@ -166,6 +168,7 @@ class LoginVC: UIViewController {
                 if let dvc = sb.instantiateViewController(identifier: "HomeVC") as? UINavigationController {
                     dvc.modalPresentationStyle = .fullScreen
                     self.present(dvc, animated: true)
+                    
                 }
                 
             case .requestErr(let msg):
@@ -179,6 +182,7 @@ class LoginVC: UIViewController {
                 break
             }
         }
+        
     }
     
 }

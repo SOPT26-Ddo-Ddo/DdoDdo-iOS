@@ -23,6 +23,10 @@ class HomeVC: UIViewController {
     @IBOutlet weak var groupTableView: UITableView!
     @IBAction func addGroupButton(_ sender: Any) {
     }
+    @IBAction func logout(_ sender: Any) {
+        self.dismiss(animated:true)
+        
+    }
     @IBOutlet weak var addGroup: UIButton!
     
     override func viewDidLoad() {
