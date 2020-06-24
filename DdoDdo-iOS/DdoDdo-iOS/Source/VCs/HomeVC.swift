@@ -29,6 +29,7 @@ class HomeVC: UIViewController {
         self.view.backgroundColor = UIColor.paleGold
         self.addGroup.dropShadow(color: .black, offSet: CGSize(width: 0, height: 3), opacity: 0.16, radius: 6)
         super.viewDidLoad()
+        self.homeProfileImageView.layer.cornerRadius = self.homeProfileImageView.bounds.width/2
         HomeService.shared.loadHome(){ networkResult in
             switch networkResult{
             case .success(let homeData):

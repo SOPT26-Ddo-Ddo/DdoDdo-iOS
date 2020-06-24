@@ -11,9 +11,9 @@ import UIKit
 class SignupVC: UIViewController {
     
     var constraintY: CGFloat = 0
+    
     @IBOutlet var signupBody: [UIView]!
     @IBOutlet weak var signupBtn: UIButton!
-    
     @IBOutlet weak var id: UITextField!
     @IBOutlet weak var pwd: UITextField!
     @IBOutlet weak var name: UITextField!
@@ -21,6 +21,11 @@ class SignupVC: UIViewController {
     @IBOutlet weak var profileMsg: UITextField!
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var stackViewConstraintY: NSLayoutConstraint!
+    @IBOutlet weak var back: UIButton!
+    
+    @IBAction func backBtn(_ sender: Any) {
+        self.dismiss(animated:true,completion: nil)
+    }
     @IBAction func signupAction(_ sender: Any) {
         SignupService.shared.signup(id: id.text!,pwd: pwd.text!, name: name.text!, gender: gender.text!, profileMsg: profileMsg.text!){
             networkResult in
@@ -114,7 +119,8 @@ class SignupVC: UIViewController {
         UIView.animate(withDuration: duration, delay: 0.0, options: .init(rawValue: curve), animations: {
             
             self.logoImageView.alpha = 0
-            
+            self.back.alpha = 0
+        
             // +로 갈수록 y값이 내려가고 -로 갈수록 y값이 올라간다.
             self.stackViewConstraintY.constant = +keyboardHeight/2 - 120
         })
@@ -131,6 +137,7 @@ class SignupVC: UIViewController {
             
             // 원래대로 돌아가도록
             self.logoImageView.alpha = 1.0
+            self.back.alpha = 1.0
             self.stackViewConstraintY.constant = self.constraintY
         })
         
