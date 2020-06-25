@@ -42,6 +42,8 @@
 		7FD2E3402498D43A008DA473 /* GenericResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2E33F2498D43A008DA473 /* GenericResponse.swift */; };
 		B831995C24A3538D00D8E03C /* SignupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B831995B24A3538D00D8E03C /* SignupService.swift */; };
 		B831995E24A3561000D8E03C /* SignupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B831995D24A3561000D8E03C /* SignupData.swift */; };
+		B831996224A5017800D8E03C /* ProfileImgService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B831996124A5017700D8E03C /* ProfileImgService.swift */; };
+		B831996424A50AE900D8E03C /* ProfileUploadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B831996324A50AE900D8E03C /* ProfileUploadData.swift */; };
 		B89C2F35248C02F600034EDB /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C2F34248C02F600034EDB /* HomeVC.swift */; };
 		B89C2F45248C166900034EDB /* HomeGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C2F44248C166900034EDB /* HomeGroupCell.swift */; };
 		B89C2F47248C257C00034EDB /* HomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C2F46248C257C00034EDB /* HomeData.swift */; };
@@ -92,6 +94,8 @@
 		83C138059DF5F81E09D24E39 /* Pods-DdoDdo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DdoDdo-iOS.debug.xcconfig"; path = "Target Support Files/Pods-DdoDdo-iOS/Pods-DdoDdo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		B831995B24A3538D00D8E03C /* SignupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupService.swift; sourceTree = "<group>"; };
 		B831995D24A3561000D8E03C /* SignupData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupData.swift; sourceTree = "<group>"; };
+		B831996124A5017700D8E03C /* ProfileImgService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImgService.swift; sourceTree = "<group>"; };
+		B831996324A50AE900D8E03C /* ProfileUploadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUploadData.swift; sourceTree = "<group>"; };
 		B89C2F34248C02F600034EDB /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		B89C2F44248C166900034EDB /* HomeGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGroupCell.swift; sourceTree = "<group>"; };
 		B89C2F46248C257C00034EDB /* HomeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeData.swift; sourceTree = "<group>"; };
@@ -219,6 +223,7 @@
 				7FD2E33F2498D43A008DA473 /* GenericResponse.swift */,
 				B8AB6463249B493F00086345 /* MatchingResultData.swift */,
 				B831995D24A3561000D8E03C /* SignupData.swift */,
+				B831996324A50AE900D8E03C /* ProfileUploadData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 				7FD2E33924976F92008DA473 /* AuthService.swift */,
 				B8AB6461249B490700086345 /* MatchingResultService.swift */,
 				B831995B24A3538D00D8E03C /* SignupService.swift */,
+				B831996124A5017700D8E03C /* ProfileImgService.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -409,6 +415,7 @@
 				B831995C24A3538D00D8E03C /* SignupService.swift in Sources */,
 				B8AB6464249B493F00086345 /* MatchingResultData.swift in Sources */,
 				7FB929C3248BD71500798CC2 /* UIColor+Extensions.swift in Sources */,
+				B831996424A50AE900D8E03C /* ProfileUploadData.swift in Sources */,
 				7FD2E33C2497771E008DA473 /* LoginData.swift in Sources */,
 				7FD2E3402498D43A008DA473 /* GenericResponse.swift in Sources */,
 				7FD2E33E24977F90008DA473 /* UIViewController+Extensions.swift in Sources */,
@@ -417,6 +424,7 @@
 				B89C2F47248C257C00034EDB /* HomeData.swift in Sources */,
 				B8AB646D24A0CD1600086345 /* SignupVC.swift in Sources */,
 				33762E45248C139400B27FA8 /* SelectedGroupViewController.swift in Sources */,
+				B831996224A5017800D8E03C /* ProfileImgService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
