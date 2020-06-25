@@ -9,18 +9,17 @@
 import UIKit
 
 class LoginVC: UIViewController {
-
     
     var constraintY: CGFloat = 0
     var id : String?
     var pw : String?
+    
     // MARK:- IBOutlet
     @IBOutlet var loginButton: UIButton!
     @IBOutlet var logoImageView: UIImageView!
     @IBOutlet var idTextField: UITextField!
     @IBOutlet var pwTextField: UITextField!
     @IBOutlet var stackViewConstraintY: NSLayoutConstraint!
-    
     @IBOutlet var idBackgroundView: UIView!
     @IBOutlet var pwBackgroundView: UIView!
     

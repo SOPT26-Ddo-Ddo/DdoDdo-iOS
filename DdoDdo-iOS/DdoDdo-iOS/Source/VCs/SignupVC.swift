@@ -9,9 +9,13 @@
 import UIKit
 
 class SignupVC: UIViewController {
-    
+    private var pickerController = UIImagePickerController()
     var constraintY: CGFloat = 0
+    var profileImg :UIImage?
+    //var profileImgName:String?
+    var profileURL:URL?
     
+    @IBOutlet weak var uploadProfileImg: UIButton!
     @IBOutlet var signupBody: [UIView]!
     @IBOutlet weak var signupBtn: UIButton!
     @IBOutlet weak var id: UITextField!
@@ -26,8 +30,11 @@ class SignupVC: UIViewController {
     @IBAction func backBtn(_ sender: Any) {
         self.dismiss(animated:true,completion: nil)
     }
+    @IBAction func uploadImg(_ sender: Any) {
+        self.openLibrary()
+    }
     @IBAction func signupAction(_ sender: Any) {
-        SignupService.shared.signup(id: id.text!,pwd: pwd.text!, name: name.text!, gender: gender.text!, profileMsg: profileMsg.text!){
+        SignupService.shared.signup(id: id.text!,pwd: pwd.text!, name: name.text!, gender: gender.text!, profileMsg: profileMsg.text!,profileImgName:profileURL!.lastPathComponent,profileImg:profileImg!){
             networkResult in
             switch networkResult {
             case .success(let userid):
@@ -58,6 +65,7 @@ class SignupVC: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        pickerController.delegate = self
         self.constraintY = self.stackViewConstraintY.constant
         let radius : CGFloat = 26
         for view in signupBody{
@@ -94,6 +102,9 @@ class SignupVC: UIViewController {
     @objc func handleTapTextField(_ sender: UITapGestureRecognizer) {
         self.id.resignFirstResponder()
         self.pwd.resignFirstResponder()
+        self.name.resignFirstResponder()
+        self.gender.resignFirstResponder()
+        self.profileMsg.resignFirstResponder()
     }
     // https://nsios.tistory.com/17?category=803407
     // MARK:- Keyboard Notification Selector Method
@@ -119,6 +130,7 @@ class SignupVC: UIViewController {
         UIView.animate(withDuration: duration, delay: 0.0, options: .init(rawValue: curve), animations: {
             
             self.logoImageView.alpha = 0
+            self.uploadProfileImg.isHidden = true
             self.back.alpha = 0
         
             // +로 갈수록 y값이 내려가고 -로 갈수록 y값이 올라간다.
@@ -137,8 +149,10 @@ class SignupVC: UIViewController {
             
             // 원래대로 돌아가도록
             self.logoImageView.alpha = 1.0
+            self.uploadProfileImg.isHidden = false
             self.back.alpha = 1.0
             self.stackViewConstraintY.constant = self.constraintY
+            
         })
         
         self.view.layoutIfNeeded()
@@ -185,3 +199,24 @@ extension SignupVC: UIGestureRecognizerDelegate {
  */
 
 
+extension SignupVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    func openLibrary(){
+        pickerController.sourceType = .photoLibrary
+        self.present(pickerController, animated:true,completion:nil)
+    }
+    func openCamera(){
+        pickerController.sourceType = .camera
+        self.present(pickerController, animated:true, completion:nil)
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage, let url = info[UIImagePickerController.InfoKey.imageURL] as? URL {
+            profileImg = image ?? UIImage()
+            profileURL = url ?? nil
+            self.logoImageView.image = profileImg
+            self.logoImageView.layer.cornerRadius = self.logoImageView.bounds.width / 2
+            self.logoImageView.contentMode = .scaleAspectFill
+            }
+        
+        dismiss(animated:true,completion:nil)
+    }
+}

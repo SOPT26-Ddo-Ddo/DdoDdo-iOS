@@ -143,12 +143,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="character_logo-2" translatesAutoresizingMaskIntoConstraints="NO" id="HDY-1H-KBD">
-                                <rect key="frame" x="131" y="144" width="112" height="112"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="HDY-1H-KBD">
+                                <rect key="frame" x="131" y="145" width="112" height="110.66666666666667"/>
+                                <color key="tintColor" red="0.77254901960784317" green="0.77254901960784317" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="HDY-1H-KBD" secondAttribute="height" multiplier="1:1" id="zDF-PL-bdZ"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRy-uR-KlX">
+                                <rect key="frame" x="131" y="144" width="112" height="112"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BRy-uR-KlX" secondAttribute="height" multiplier="1:1" id="PZ6-bn-9p3"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="uploadImg:" destination="FWv-FU-Awh" eventType="touchUpInside" id="DZj-bF-JLv"/>
+                                </connections>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="w2C-U1-jLq">
                                 <rect key="frame" x="16" y="274" width="343" height="320"/>
                                 <subviews>
@@ -277,10 +290,13 @@
                             <constraint firstItem="qy2-Tw-CVb" firstAttribute="leading" secondItem="Pge-9c-rPR" secondAttribute="leading" constant="99" id="HUd-E3-USP"/>
                             <constraint firstItem="HDY-1H-KBD" firstAttribute="leading" secondItem="Pge-9c-rPR" secondAttribute="leading" constant="131" id="TOk-R2-pbN"/>
                             <constraint firstItem="w2C-U1-jLq" firstAttribute="top" secondItem="Pge-9c-rPR" secondAttribute="top" constant="230" id="Vh5-zf-p6X"/>
+                            <constraint firstItem="BRy-uR-KlX" firstAttribute="leading" secondItem="Pge-9c-rPR" secondAttribute="leading" constant="131" id="Xi4-OT-6qN"/>
                             <constraint firstItem="Pge-9c-rPR" firstAttribute="trailing" secondItem="w2C-U1-jLq" secondAttribute="trailing" constant="16" id="aZE-cw-Mnm"/>
                             <constraint firstItem="w2C-U1-jLq" firstAttribute="leading" secondItem="Pge-9c-rPR" secondAttribute="leading" constant="16" id="fwN-z4-J9T"/>
                             <constraint firstItem="HDY-1H-KBD" firstAttribute="top" secondItem="Pge-9c-rPR" secondAttribute="top" constant="100" id="qZj-Gq-Re3"/>
+                            <constraint firstItem="BRy-uR-KlX" firstAttribute="top" secondItem="Pge-9c-rPR" secondAttribute="top" constant="100" id="xW1-v9-9aq"/>
                             <constraint firstItem="Pge-9c-rPR" firstAttribute="trailing" secondItem="HDY-1H-KBD" secondAttribute="trailing" constant="132" id="xbe-N7-ib6"/>
+                            <constraint firstItem="Pge-9c-rPR" firstAttribute="trailing" secondItem="BRy-uR-KlX" secondAttribute="trailing" constant="132" id="ypw-kK-GrQ"/>
                             <constraint firstItem="Z1R-bR-MEE" firstAttribute="leading" secondItem="Pge-9c-rPR" secondAttribute="leading" constant="17" id="zqI-ra-pyh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Pge-9c-rPR"/>
@@ -295,6 +311,7 @@
                         <outlet property="pwd" destination="11E-KB-s30" id="Nud-Dg-74C"/>
                         <outlet property="signupBtn" destination="qy2-Tw-CVb" id="2fb-nm-lbb"/>
                         <outlet property="stackViewConstraintY" destination="Vh5-zf-p6X" id="62q-mh-RYg"/>
+                        <outlet property="uploadProfileImg" destination="BRy-uR-KlX" id="9xi-U9-PBS"/>
                         <outletCollection property="signupBody" destination="1Qb-bJ-R4f" collectionClass="NSMutableArray" id="Qa3-yo-Zjj"/>
                         <outletCollection property="signupBody" destination="OR4-ry-hxI" collectionClass="NSMutableArray" id="4hc-qV-UbE"/>
                         <outletCollection property="signupBody" destination="OhI-px-kas" collectionClass="NSMutableArray" id="e4y-U5-vUd"/>
@@ -304,11 +321,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o8m-zA-bM0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1006" y="78"/>
+            <point key="canvasLocation" x="278" y="78"/>
         </scene>
     </scenes>
     <resources>
         <image name="character_logo-2" width="2953" height="2953"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>

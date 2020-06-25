@@ -35,6 +35,7 @@ struct ProfileData: Codable{
     var profileMsg: String
     var groupOn: [GroupInfo]
     var groupOff: [GroupInfo]
+    var profileImg: String
 }
 struct GroupInfo: Codable{
     var groupIdx: Int

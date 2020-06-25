@@ -104,6 +104,7 @@ extension HomeVC : UITableViewDataSource{
             return homeUserData?.groupOn.count ?? 0
         }
         else{
+            //let groupoff = 
             return homeUserData?.groupOff.count ?? 0
         }
     
