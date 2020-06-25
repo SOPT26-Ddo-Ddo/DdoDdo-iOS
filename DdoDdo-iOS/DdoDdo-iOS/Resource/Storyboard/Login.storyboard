@@ -268,6 +268,16 @@
                                     <action selector="backBtn:" destination="FWv-FU-Awh" eventType="touchUpInside" id="84T-i4-0k6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRy-uR-KlX">
+                                <rect key="frame" x="34" y="602" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="이미지">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="uploadImg:" destination="FWv-FU-Awh" eventType="touchUpInside" id="DZj-bF-JLv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -304,7 +314,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o8m-zA-bM0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1006" y="78"/>
+            <point key="canvasLocation" x="278" y="78"/>
         </scene>
     </scenes>
     <resources>

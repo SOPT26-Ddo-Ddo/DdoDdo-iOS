@@ -9,8 +9,11 @@
 import UIKit
 
 class SignupVC: UIViewController {
-    
+    private var pickerController = UIImagePickerController()
     var constraintY: CGFloat = 0
+    var profileImg :UIImage?
+    //var profileImgName:String?
+    var profileURL:URL?
     
     @IBOutlet var signupBody: [UIView]!
     @IBOutlet weak var signupBtn: UIButton!
@@ -26,8 +29,11 @@ class SignupVC: UIViewController {
     @IBAction func backBtn(_ sender: Any) {
         self.dismiss(animated:true,completion: nil)
     }
+    @IBAction func uploadImg(_ sender: Any) {
+        self.openLibrary()
+    }
     @IBAction func signupAction(_ sender: Any) {
-        SignupService.shared.signup(id: id.text!,pwd: pwd.text!, name: name.text!, gender: gender.text!, profileMsg: profileMsg.text!){
+        SignupService.shared.signup(id: id.text!,pwd: pwd.text!, name: name.text!, gender: gender.text!, profileMsg: profileMsg.text!,profileImgName:profileURL!.lastPathComponent,profileImg:profileImg!){
             networkResult in
             switch networkResult {
             case .success(let userid):
@@ -58,6 +64,7 @@ class SignupVC: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        pickerController.delegate = self
         self.constraintY = self.stackViewConstraintY.constant
         let radius : CGFloat = 26
         for view in signupBody{
@@ -185,3 +192,21 @@ extension SignupVC: UIGestureRecognizerDelegate {
  */
 
 
+extension SignupVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    func openLibrary(){
+        pickerController.sourceType = .photoLibrary
+        self.present(pickerController, animated:true,completion:nil)
+    }
+    func openCamera(){
+        pickerController.sourceType = .camera
+        self.present(pickerController, animated:true, completion:nil)
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage, let url = info[UIImagePickerController.InfoKey.imageURL] as? URL {
+            profileImg = image ?? UIImage()
+            profileURL = url ?? nil
+            }
+        
+        dismiss(animated:true,completion:nil)
+    }
+}
