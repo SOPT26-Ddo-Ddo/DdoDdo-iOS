@@ -31,7 +31,18 @@ class SignupVC: UIViewController {
         self.dismiss(animated:true,completion: nil)
     }
     @IBAction func uploadImg(_ sender: Any) {
-        self.openLibrary()
+        let alertController = UIAlertController(title : "사진 선택",message:"가져올 곳을 선택하세요",preferredStyle:.actionSheet)
+        let galleryAction = UIAlertAction(title:"사진앨범",style:.default){
+            action in self.openLibrary()
+        }
+        let photoAction = UIAlertAction(title :"카메라",style:.default){
+            action in self.openCamera()
+        }
+        let cancelAction = UIAlertAction(title:"취소",style:.cancel, handler:nil)
+        alertController.addAction(galleryAction)
+        alertController.addAction(photoAction)
+        alertController.addAction(cancelAction)
+        self.present(alertController,animated:true,completion:nil)
     }
     @IBAction func signupAction(_ sender: Any) {
         SignupService.shared.signup(id: id.text!,pwd: pwd.text!, name: name.text!, gender: gender.text!, profileMsg: profileMsg.text!,profileImgName:profileURL!.lastPathComponent,profileImg:profileImg!){

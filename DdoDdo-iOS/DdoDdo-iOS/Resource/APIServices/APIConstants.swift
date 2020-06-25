@@ -17,6 +17,7 @@ struct APIConstants {
     static let homeTokenURL = baseURL + "token"
     static let SelectedGroupURL = baseURL+"group"
     static let signupURL = baseURL + "user/signup"
+    static let profileURL = baseURL + "user/profile"
     
     
     /// 나라나라 충돌나라~

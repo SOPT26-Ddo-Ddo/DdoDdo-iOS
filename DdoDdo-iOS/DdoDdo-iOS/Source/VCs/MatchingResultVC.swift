@@ -9,6 +9,7 @@
 import UIKit
 
 class MatchingResultVC: UIViewController {
+    
     @IBOutlet var favoriteCollectionView: UICollectionView!
     @IBOutlet var okButton: UIButton!
     @IBOutlet var infoBgView: UIView!
@@ -24,6 +25,7 @@ class MatchingResultVC: UIViewController {
     var imageList = ["favorite-image-example1", "favorite-image-example2", "favorite-image-example3", "favorite-image-example4"]
     var bigProfileImg: String?
     var groupIdx:Int?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +59,7 @@ class MatchingResultVC: UIViewController {
                     print(manitoData)
                     guard let manitodata = manitoData as? MatchingResult else{return}
                     self.myManitoInfo = manitodata.myManito
+              
                     switch self.myManitoInfo!.userIdx{
                     case 48:
                         self.bigProfileImg = "profile-example4"
