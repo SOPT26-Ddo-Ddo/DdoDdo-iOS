@@ -59,7 +59,10 @@ class ResultAfterOKVC: UIViewController {
         self.backToHomeButton.dropShadow(color: .black, offSet: CGSize(width: 0, height: 3), opacity: 0.16, radius: 6)
         changeImage()
         
+        
     }
+    
+    
     @IBAction func dismissButton(_ sender: Any) {
         self.navigationController?.popToRootViewController(animated: true)
     }

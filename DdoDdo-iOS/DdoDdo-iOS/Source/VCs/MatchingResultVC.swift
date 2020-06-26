@@ -22,7 +22,7 @@ class MatchingResultVC: UIViewController {
     }
     var myManitoInfo : MyManito?
     var favoriteList = ["#또또", "#10어먹조", "#솝트", "#사랑해"]
-    var imageList = ["favorite-image-example1", "favorite-image-example2", "favorite-image-example3", "favorite-image-example4"]
+    var imageList = ["favorite-image-example1", "sangil-favorite1", "sangil-favorite2", "sangil-favorite3"]
     var bigProfileImg: String?
     var groupIdx:Int?
     

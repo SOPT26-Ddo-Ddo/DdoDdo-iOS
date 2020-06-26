@@ -31,7 +31,7 @@ struct SignupService {
                 multipartFormData.append(val.data(using:String.Encoding.utf8)!,withName:key)
             }
             let imageData = profileImg.jpegData(compressionQuality:1.0)!
-            multipartFormData.append(imageData,withName:"profileImg", fileName:profileImgName, mimeType:"image/jpeg")
+                multipartFormData.append(imageData,withName:"profileImg", fileName:profileImgName, mimeType:"image/jpeg")
         }, usingThreshold:UInt64.init(), to: APIConstants.signupURL,method:.post, headers:header,encodingCompletion:{(result) in
             switch result{
             case .success(let upload,_,_):
