@@ -45,7 +45,7 @@ class SignupVC: UIViewController {
         self.present(alertController,animated:true,completion:nil)
     }
     @IBAction func signupAction(_ sender: Any) {
-        SignupService.shared.signup(id: id.text!,pwd: pwd.text!, name: name.text!, gender: gender.text!, profileMsg: profileMsg.text!,profileImgName:profileURL!.lastPathComponent,profileImg:profileImg!){
+        SignupService.shared.signup(id: id.text!,pwd: pwd.text!, name: name.text!, gender: gender.text!, profileMsg: profileMsg.text!,profileImgName:profileURL!.lastPathComponent ,profileImg:profileImg!){
             networkResult in
             switch networkResult {
             case .success(let userid):
@@ -145,7 +145,7 @@ class SignupVC: UIViewController {
             self.back.alpha = 0
         
             // +로 갈수록 y값이 내려가고 -로 갈수록 y값이 올라간다.
-            self.stackViewConstraintY.constant = +keyboardHeight/2 - 120
+            self.stackViewConstraintY.constant = +keyboardHeight/2 - 100
         })
         
         self.view.layoutIfNeeded()

@@ -12,5 +12,5 @@ import Foundation
 // MARK: - Datum
 struct ProfileUploadData: Codable {
     var id, name, profileMsg: String
-    var profileImg: String
+    var profileImg: String?
 }

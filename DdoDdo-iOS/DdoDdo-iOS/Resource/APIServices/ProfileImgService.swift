@@ -48,11 +48,12 @@ struct ProfileImgService {
     
     private func isUpdating(_ data:  Data) -> NetworkResult<Any> {
         let decoder = JSONDecoder()
-        guard let decodeData = try? decoder.decode(GenericResponse<ProfileUploadData>.self, from: data) else { return .pathErr }
+        guard let decodeData = try? decoder.decode(GenericResponse<[ProfileUploadData]>.self, from: data) else { return .pathErr }
         if decodeData.status == 200 {
-            guard let userData = decodeData.data else { return .requestErr(decodeData.message) }
+            guard let userData = decodeData.data?[0] else { return .requestErr(decodeData.message) }
             return .success(userData.profileImg) }
         else {
+            print("여기2")
             return .requestErr(decodeData.message) }
     }
 }

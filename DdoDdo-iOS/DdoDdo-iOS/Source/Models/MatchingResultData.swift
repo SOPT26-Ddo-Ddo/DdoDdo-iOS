@@ -40,4 +40,6 @@ struct MyManito: Codable {
     var userIdx: Int
     var id, pwd, salt, name: String
     var gender, profileMsg: String
+    var profileImg : String
+    
 }
