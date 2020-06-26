@@ -33,19 +33,18 @@ struct ProfileData: Codable{
     var idx: Int
     var name: String
     var profileMsg: String
-    var groupOn: [GroupName]
-    var groupOff: [GroupName]
+    var profileImg: String?
+    var groupOn: [GroupInfo]
+    var groupOff: [GroupInfo]
 }
-struct GroupName: Codable{
+struct GroupInfo: Codable{
+    var groupIdx: Int
     var name: String
-}
-struct TokenData: Codable {
-    var token: String
+    var numPeople:Int
+    var deadline:String
+    var fix:Int
+    var finish:Int
+    var leader:Int
 }
 
-struct HomeTokenData: Codable {
-    var status: Int
-    var success: Bool
-    var message: String
-    var data: TokenData?
-}
+

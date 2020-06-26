@@ -10,6 +10,7 @@ import UIKit
 
 class ResultAfterOKMissionCell: UITableViewCell {
     static let identifier = "ResultAfterOKMissionCell"
+    @IBOutlet weak var missionLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
