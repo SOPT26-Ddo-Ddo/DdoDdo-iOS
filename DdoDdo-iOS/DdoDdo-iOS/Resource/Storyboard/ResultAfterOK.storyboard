@@ -51,7 +51,7 @@
                                 <rect key="frame" x="0.0" y="131" width="375" height="214"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="버디버디 4조" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6K4-9n-fzL">
-                                        <rect key="frame" x="31.999999999999993" y="8.0000000000000018" width="94.333333333333314" height="21.666666666666671"/>
+                                        <rect key="frame" x="19.999999999999993" y="8.0000000000000018" width="94.333333333333314" height="21.666666666666671"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -78,6 +78,9 @@
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U20-4L-3j1">
                                                             <rect key="frame" x="0.0" y="0.0" width="38" height="38"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="U20-4L-3j1" secondAttribute="height" multiplier="1:1" id="Bng-JD-d6q"/>
+                                                            </constraints>
                                                         </imageView>
                                                     </subviews>
                                                     <constraints>
@@ -120,7 +123,7 @@
                                     <constraint firstAttribute="trailing" secondItem="syI-yq-UWr" secondAttribute="trailing" constant="16" id="7La-no-ZcS"/>
                                     <constraint firstItem="uea-8V-dOd" firstAttribute="top" secondItem="syI-yq-UWr" secondAttribute="bottom" constant="13" id="DIN-9B-q3a"/>
                                     <constraint firstItem="6K4-9n-fzL" firstAttribute="top" secondItem="PtQ-2h-Mmd" secondAttribute="top" constant="8" id="HGP-rT-Aot"/>
-                                    <constraint firstItem="6K4-9n-fzL" firstAttribute="leading" secondItem="PtQ-2h-Mmd" secondAttribute="leading" constant="32" id="Jm2-MW-9f8"/>
+                                    <constraint firstItem="6K4-9n-fzL" firstAttribute="leading" secondItem="PtQ-2h-Mmd" secondAttribute="leading" constant="20" id="Jm2-MW-9f8"/>
                                     <constraint firstItem="Dud-z6-JDx" firstAttribute="top" secondItem="uea-8V-dOd" secondAttribute="bottom" constant="13" id="WEb-cl-3oq"/>
                                     <constraint firstItem="h9s-4L-wjc" firstAttribute="leading" secondItem="PtQ-2h-Mmd" secondAttribute="leading" constant="112" id="ZHp-bI-MDm"/>
                                     <constraint firstItem="Dud-z6-JDx" firstAttribute="leading" secondItem="PtQ-2h-Mmd" secondAttribute="leading" constant="95" id="eBr-gd-Nsv"/>
@@ -147,7 +150,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="먹을 때 제일 행복합니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fwb-Iu-kUE">
-                                        <rect key="frame" x="164" y="54" width="146" height="18"/>
+                                        <rect key="frame" x="164" y="54" width="191" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -222,7 +225,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="케이팝" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VdA-Tn-rbx">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="개발자" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VdA-Tn-rbx">
                                                 <rect key="frame" x="54" y="0.0" width="49" height="23"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -275,6 +278,7 @@
                                     <constraint firstItem="fp6-8t-hth" firstAttribute="top" secondItem="Urb-aG-LiW" secondAttribute="bottom" constant="27" id="Jod-OQ-YI9"/>
                                     <constraint firstItem="zAb-Hg-Bjg" firstAttribute="leading" secondItem="Urb-aG-LiW" secondAttribute="trailing" constant="77" id="N5j-o2-fEc"/>
                                     <constraint firstItem="VZY-bc-0U8" firstAttribute="top" secondItem="Fwb-Iu-kUE" secondAttribute="bottom" constant="9" id="PEd-0r-bfn"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fwb-Iu-kUE" secondAttribute="trailing" constant="20" id="Qqm-lK-uKs"/>
                                     <constraint firstItem="zAb-Hg-Bjg" firstAttribute="top" secondItem="kpd-eo-3sN" secondAttribute="top" constant="25" id="Sny-Ns-drO"/>
                                     <constraint firstItem="thw-4l-QOg" firstAttribute="top" secondItem="fp6-8t-hth" secondAttribute="bottom" id="Vq4-2x-8hH"/>
                                     <constraint firstAttribute="trailing" secondItem="thw-4l-QOg" secondAttribute="trailing" id="cpB-PO-djL"/>
@@ -306,6 +310,7 @@
                         <outlet property="MyManitoProfileImg" destination="Urb-aG-LiW" id="beW-G3-Ybn"/>
                         <outlet property="backToHomeButton" destination="H9M-eL-cBC" id="n7t-2b-P6F"/>
                         <outlet property="groupInfoBg" destination="PtQ-2h-Mmd" id="aVf-PO-Qlx"/>
+                        <outlet property="groupNameLabel" destination="6K4-9n-fzL" id="AlE-f5-6cU"/>
                         <outlet property="manitoLabel" destination="zAb-Hg-Bjg" id="xdc-DR-AEd"/>
                         <outlet property="manitoMsg" destination="Fwb-Iu-kUE" id="GWE-gU-d0B"/>
                         <outlet property="memberCollectionView" destination="syI-yq-UWr" id="Jaq-yO-MVF"/>

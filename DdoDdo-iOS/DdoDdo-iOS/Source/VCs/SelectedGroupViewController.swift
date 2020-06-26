@@ -27,7 +27,7 @@ class SelectedGroupViewController: UIViewController {
     @IBOutlet var matchingBtn: UIButton!
     
     var collectionItems : [groupUserData] = []
-    var groupName: String?
+    //var groupName: String?
     var ImageItems = [String]()
 
     
@@ -82,6 +82,11 @@ class SelectedGroupViewController: UIViewController {
                     dvc2.name = dvc1.myManitoInfo?.name
                     dvc2.msg = dvc1.myManitoInfo?.profileMsg
                     dvc2.manitoIdx = dvc1.myManitoInfo?.userIdx
+                    dvc2.myManitoProfileImgName = dvc1.myManitoInfo?.profileImg
+                    dvc2.groupName = self.groupNameLabel.text
+                    for user in self.collectionItems{
+                        dvc2.imageList.append(user.profileImg)
+                    }
                     print(#function)
                     self.navigationController?.pushViewController(dvc2, animated: true)
                     
@@ -122,7 +127,7 @@ extension SelectedGroupViewController:UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SelectedGroupProfileCell", for: indexPath) as? SelectedGroupProfileViewCell else { return UICollectionViewCell() }
         print(collectionItems[indexPath.item])
         cell.bind(model:collectionItems[indexPath.item])
-        cell.profileImageView.image = UIImage(named: ImageItems[indexPath.row])
+        cell.profileImageView.imageFromUrl(collectionItems[indexPath.item].profileImg, defaultImgPath: "person.circle.fill")
         cell.profileImageView.layer.cornerRadius = cell.profileImageView.bounds.width / 2
         cell.profileImageView.contentMode = .scaleAspectFill
         cell.profileStatusBtn.layer.cornerRadius = 9

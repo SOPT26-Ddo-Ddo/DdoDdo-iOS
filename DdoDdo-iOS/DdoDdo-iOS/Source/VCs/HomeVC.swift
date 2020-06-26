@@ -87,6 +87,14 @@ class HomeVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    //셀 선택 후 돌아왔을때 디셀렉트로!
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        if let index = groupTableView.indexPathForSelectedRow{
+            groupTableView.deselectRow(at:index,animated:true)
+        }
+    }
+    
     private func setProfileLabel(){
         homeProfileHiLabel.text = homeUserData?.name ?? ""
         homeProfileTextView.text = homeUserData?.profileMsg ?? ""
@@ -226,7 +234,7 @@ extension HomeVC: UIImagePickerControllerDelegate, UINavigationControllerDelegat
                        case .success: print("success")
                        case .requestErr(let message):
                            guard let message = message as? String else { return }
-                           let alertViewController = UIAlertController(title: "회원가입 실패", message: message, preferredStyle: .alert)
+                           let alertViewController = UIAlertController(title: "이미지 업로드 실패", message: message, preferredStyle: .alert)
                            let action = UIAlertAction(title: "확인", style: .cancel, handler: nil)
                            alertViewController.addAction(action)
                            self.present(alertViewController, animated: true, completion: nil)

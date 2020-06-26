@@ -74,7 +74,7 @@
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfb-8S-4Fn">
-                                <rect key="frame" x="100" y="282" width="175" height="44"/>
+                                <rect key="frame" x="80" y="282" width="215" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="0Mq-tf-i5g"/>
                                 </constraints>
@@ -108,7 +108,7 @@
                                     <constraint firstAttribute="trailing" secondItem="Kqv-V9-Wwa" secondAttribute="trailing" constant="99" id="uJh-ZQ-CIm"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ifo-Jx-Xm8">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ifo-Jx-Xm8">
                                 <rect key="frame" x="341" y="90" width="18" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="OAl-SW-3VS"/>
@@ -154,7 +154,7 @@
                             <constraint firstItem="WLL-Ln-DQB" firstAttribute="trailing" secondItem="Okl-RM-acc" secondAttribute="trailing" id="Z2F-36-hWk"/>
                             <constraint firstItem="WLL-Ln-DQB" firstAttribute="leading" secondItem="Okl-RM-acc" secondAttribute="leading" id="ZwN-1C-xCf"/>
                             <constraint firstItem="Uwz-tH-h5p" firstAttribute="top" secondItem="WLL-Ln-DQB" secondAttribute="bottom" id="bOc-M7-IX7"/>
-                            <constraint firstItem="3Le-1E-IHH" firstAttribute="top" secondItem="Okl-RM-acc" secondAttribute="top" constant="12" id="cDQ-wL-9b7"/>
+                            <constraint firstItem="3Le-1E-IHH" firstAttribute="top" secondItem="Okl-RM-acc" secondAttribute="top" constant="5" id="cDQ-wL-9b7"/>
                             <constraint firstItem="RQg-P1-h1d" firstAttribute="top" secondItem="2zG-WH-iBp" secondAttribute="top" id="cJe-Al-WZF"/>
                             <constraint firstItem="Ifo-Jx-Xm8" firstAttribute="top" secondItem="rqx-AQ-Rou" secondAttribute="top" constant="90" id="jxX-Sq-4zt"/>
                             <constraint firstItem="Okl-RM-acc" firstAttribute="trailing" secondItem="Ifo-Jx-Xm8" secondAttribute="trailing" constant="16" id="mxA-dJ-0Yo"/>
@@ -162,8 +162,8 @@
                             <constraint firstItem="Okl-RM-acc" firstAttribute="trailing" secondItem="3Le-1E-IHH" secondAttribute="trailing" constant="16" id="qcD-ot-BtC"/>
                             <constraint firstAttribute="trailing" secondItem="KeG-2g-xQi" secondAttribute="trailing" constant="130" id="tIV-Iw-zKm"/>
                             <constraint firstItem="vfb-8S-4Fn" firstAttribute="top" secondItem="DNQ-aW-O7N" secondAttribute="bottom" constant="21" id="uun-Yi-sZi"/>
-                            <constraint firstItem="Okl-RM-acc" firstAttribute="trailing" secondItem="vfb-8S-4Fn" secondAttribute="trailing" constant="100" id="whf-4w-cQr"/>
-                            <constraint firstItem="vfb-8S-4Fn" firstAttribute="leading" secondItem="Okl-RM-acc" secondAttribute="leading" constant="100" id="yGy-2h-x1z"/>
+                            <constraint firstItem="Okl-RM-acc" firstAttribute="trailing" secondItem="vfb-8S-4Fn" secondAttribute="trailing" constant="80" id="whf-4w-cQr"/>
+                            <constraint firstItem="vfb-8S-4Fn" firstAttribute="leading" secondItem="Okl-RM-acc" secondAttribute="leading" constant="80" id="yGy-2h-x1z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Okl-RM-acc"/>
                     </view>

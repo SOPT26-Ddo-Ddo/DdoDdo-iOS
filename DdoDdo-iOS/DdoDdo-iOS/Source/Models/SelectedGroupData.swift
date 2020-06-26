@@ -94,4 +94,5 @@ struct groupUserData: Codable {
     var name:String
     var gender:String
     var profileMsg:String
+    var profileImg:String?
 }
